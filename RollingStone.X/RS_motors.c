@@ -20,7 +20,7 @@ void RS_mot_updateSpeed(int *acc_T, int *speed_T){
 
 int RS_mot_calcSpeedLin(int accY){
     int speedLin;
-    speedLin = K_LIN*accY;
+    speedLin += K_LIN*accY;
     return speedLin;
 }
 
@@ -30,6 +30,5 @@ int RS_mot_calcSpeedAng(int accX){
     return speedAng;
 }
     
-
 
 #endif	/* RS_MOTOR_C */

@@ -11,10 +11,6 @@
 #define	RS_CONST_H  
 
 #include <xc.h> // include processor files - each processor file is guarded.  
-
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
     
 #define ID_ACC_X    0
 #define ID_ACC_Y    1
@@ -23,6 +19,8 @@ extern "C" {
 
 #define LENGHT_SPEED 5
     
+#define ID_SPPED    1
+
 
 #ifdef	__cplusplus
 }
