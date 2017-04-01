@@ -7,35 +7,26 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef RS_MOTOR_H
-#define	RS_MOTOR_H
+#ifndef RS_CONST_H
+#define	RS_CONST_H  
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 #ifdef	__cplusplus
 extern "C" {
 #endif /* __cplusplus */
+    
+#define ID_ACC_X    0
+#define ID_ACC_Y    1
+#define ID_ACC_Z    2
 
-#include "RS_const.h"
 
+#define LENGHT_SPEED 5
     
-#define K_LIN   0
-#define K_ANG   0
-    
-    
-void RS_mot_updateSpeed(int *acc_T, int *speed_T);
-int RS_mot_calcSpeedLin(int accY);
-int RS_mot_calcSpeedAng(int accX);
-    
-typedef Speed Speed;
-struct Speed{
-    int speedLin;
-    int speedAng;
-    Speed *Next;
-};
-    
+
 #ifdef	__cplusplus
 }
 #endif /* __cplusplus */
 
-#endif	/* RS_MOTOR_H */
+#endif	/* XC_CONST_H */
+

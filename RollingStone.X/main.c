@@ -8,6 +8,10 @@
 
 #include "xc.h"
 
+#include "RS_motor.h"
+#include "RS_accelerometer.h"
+#include "RS_const.h"
+
 int main(void) {
     return 0;
 }
