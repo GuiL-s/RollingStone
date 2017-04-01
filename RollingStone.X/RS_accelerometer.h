@@ -1,10 +1,19 @@
-#ifndef _ACCELEROMETER
-#define _ACCELEROMETER
+/* 
+ * File:   
+ * Author: 
+ * Comments:
+ * Revision history: 
+ */
 
-#define ID_X    0
-#define ID_Y    1
-#define ID_Z    2
+// This is a guard condition so that contents of this file are not included
+// more than once.  
+#ifndef RS_ACCELEROMETER_H
+#define	RS_ACCELEROMETER_H  
 
-int RS_acc_update(int* acc_T);
+
+#define LENGHT_RAW_T    8
+#define ACC_ZERO    2048
+void RS_acc_update(int* acc_T, int* speed_T);
+
 
 #endif

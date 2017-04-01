@@ -12,10 +12,6 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
 #include "RS_const.h"
 
     
@@ -27,15 +23,5 @@ void RS_mot_updateSpeed(int *acc_T, int *speed_T);
 int RS_mot_calcSpeedLin(int accY);
 int RS_mot_calcSpeedAng(int accX);
     
-typedef Speed Speed;
-struct Speed{
-    int speedLin;
-    int speedAng;
-    Speed *Next;
-};
-    
-#ifdef	__cplusplus
-}
-#endif /* __cplusplus */
 
 #endif	/* RS_MOTOR_H */

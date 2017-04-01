@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c RS_motors.c RS_accelerometer.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s RS_acc_mean_table.s
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RS_motors.o.d ${OBJECTDIR}/RS_accelerometer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o ${OBJECTDIR}/RS_acc_mean_table.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RS_motors.o.d ${OBJECTDIR}/RS_accelerometer.o.d ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d ${OBJECTDIR}/_ext/250871475/e_motors.o.d ${OBJECTDIR}/_ext/250871475/e_led.o.d ${OBJECTDIR}/_ext/250871475/e_init_port.o.d ${OBJECTDIR}/RS_acc_mean.o.d ${OBJECTDIR}/RS_acc_mean_table.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o ${OBJECTDIR}/RS_acc_mean_table.o
 
 # Source Files
-SOURCEFILES=main.c RS_motors.c RS_accelerometer.c
+SOURCEFILES=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s RS_acc_mean_table.s
 
 
 CFLAGS=
@@ -92,51 +92,149 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/RS_motors.o: RS_motors.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/RS_motors.o.d 
 	@${RM} ${OBJECTDIR}/RS_motors.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_motors.c  -o ${OBJECTDIR}/RS_motors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_motors.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_motors.c  -o ${OBJECTDIR}/RS_motors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_motors.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/RS_motors.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/RS_accelerometer.o: RS_accelerometer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/RS_accelerometer.o.d 
 	@${RM} ${OBJECTDIR}/RS_accelerometer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_accelerometer.c  -o ${OBJECTDIR}/RS_accelerometer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_accelerometer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_accelerometer.c  -o ${OBJECTDIR}/RS_accelerometer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_accelerometer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/RS_accelerometer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1017064210/e_ad_conv.o: ../../library/a_d/e_ad_conv.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1017064210" 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/a_d/e_ad_conv.c  -o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1017064210/e_accelerometer.o: ../../library/a_d/e_accelerometer.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1017064210" 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/a_d/e_accelerometer.c  -o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/250871475/e_motors.o: ../../library/motor_led/e_motors.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/250871475" 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_motors.o.d 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_motors.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_motors.c  -o ${OBJECTDIR}/_ext/250871475/e_motors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_motors.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_motors.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/250871475/e_led.o: ../../library/motor_led/e_led.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/250871475" 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_led.o.d 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_led.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_led.c  -o ${OBJECTDIR}/_ext/250871475/e_led.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_led.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_led.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/250871475/e_init_port.o: ../../library/motor_led/e_init_port.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/250871475" 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_init_port.o.d 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_init_port.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_init_port.c  -o ${OBJECTDIR}/_ext/250871475/e_init_port.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_init_port.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_init_port.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/RS_motors.o: RS_motors.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/RS_motors.o.d 
 	@${RM} ${OBJECTDIR}/RS_motors.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_motors.c  -o ${OBJECTDIR}/RS_motors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_motors.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_motors.c  -o ${OBJECTDIR}/RS_motors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_motors.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/RS_motors.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/RS_accelerometer.o: RS_accelerometer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/RS_accelerometer.o.d 
 	@${RM} ${OBJECTDIR}/RS_accelerometer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_accelerometer.c  -o ${OBJECTDIR}/RS_accelerometer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_accelerometer.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  RS_accelerometer.c  -o ${OBJECTDIR}/RS_accelerometer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/RS_accelerometer.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/RS_accelerometer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1017064210/e_ad_conv.o: ../../library/a_d/e_ad_conv.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1017064210" 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/a_d/e_ad_conv.c  -o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1017064210/e_accelerometer.o: ../../library/a_d/e_accelerometer.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1017064210" 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/a_d/e_accelerometer.c  -o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/250871475/e_motors.o: ../../library/motor_led/e_motors.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/250871475" 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_motors.o.d 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_motors.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_motors.c  -o ${OBJECTDIR}/_ext/250871475/e_motors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_motors.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_motors.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/250871475/e_led.o: ../../library/motor_led/e_led.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/250871475" 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_led.o.d 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_led.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_led.c  -o ${OBJECTDIR}/_ext/250871475/e_led.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_led.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_led.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/250871475/e_init_port.o: ../../library/motor_led/e_init_port.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/250871475" 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_init_port.o.d 
+	@${RM} ${OBJECTDIR}/_ext/250871475/e_init_port.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_init_port.c  -o ${OBJECTDIR}/_ext/250871475/e_init_port.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_init_port.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_init_port.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/RS_acc_mean.o.d 
+	@${RM} ${OBJECTDIR}/RS_acc_mean.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean.s  -o ${OBJECTDIR}/RS_acc_mean.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/RS_acc_mean_table.o: RS_acc_mean_table.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o.d 
+	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean_table.s  -o ${OBJECTDIR}/RS_acc_mean_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean_table.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean_table.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
 else
+${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/RS_acc_mean.o.d 
+	@${RM} ${OBJECTDIR}/RS_acc_mean.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean.s  -o ${OBJECTDIR}/RS_acc_mean.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/RS_acc_mean_table.o: RS_acc_mean_table.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o.d 
+	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean_table.s  -o ${OBJECTDIR}/RS_acc_mean_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean_table.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean_table.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
 endif
 
 # ------------------------------------------------------------------------------------

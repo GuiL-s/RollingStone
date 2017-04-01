@@ -14,19 +14,19 @@
 
 void RS_mot_updateSpeed(int *acc_T, int *speed_T){
    
-    RS_mot_calcSpeedLin(acc_T[ID_ACC_Y]);
-    RS_mot_calcSpeedAng(acc_T[ID_ACC_X]);
+    speed_T[ID_SPEED_LIN] = RS_mot_calcSpeedLin(acc_T[ID_ACC_Y]);
+    speed_T[ID_SPEED_ANG] = RS_mot_calcSpeedAng(acc_T[ID_ACC_X]);
 }
 
-int RS_mot_calcSpeedLin(int accY){
-    int speedLin;
-    speedLin += K_LIN*accY;
+int RS_mot_calcSpeedLin(int acc_Y){
+    static int speedLin;
+    speedLin += K_LIN*acc_Y;
     return speedLin;
 }
 
-int RS_mot_calcSpeedAng(int accX){
+int RS_mot_calcSpeedAng(int acc_X){
     int speedAng;
-    speedAng = K_ANG*accX;
+    speedAng = K_ANG*acc_X;
     return speedAng;
 }
     
