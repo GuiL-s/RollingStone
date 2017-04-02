@@ -30,7 +30,6 @@
       <itemPath>../../library/motor_led/e_led.c</itemPath>
       <itemPath>../../library/motor_led/e_init_port.c</itemPath>
       <itemPath>RS_acc_mean.s</itemPath>
-      <itemPath>RS_acc_mean_table.s</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

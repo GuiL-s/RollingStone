@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s RS_acc_mean_table.s
+SOURCEFILES_QUOTED_IF_SPACED=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o ${OBJECTDIR}/RS_acc_mean_table.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RS_motors.o.d ${OBJECTDIR}/RS_accelerometer.o.d ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d ${OBJECTDIR}/_ext/250871475/e_motors.o.d ${OBJECTDIR}/_ext/250871475/e_led.o.d ${OBJECTDIR}/_ext/250871475/e_init_port.o.d ${OBJECTDIR}/RS_acc_mean.o.d ${OBJECTDIR}/RS_acc_mean_table.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RS_motors.o.d ${OBJECTDIR}/RS_accelerometer.o.d ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d ${OBJECTDIR}/_ext/250871475/e_motors.o.d ${OBJECTDIR}/_ext/250871475/e_led.o.d ${OBJECTDIR}/_ext/250871475/e_init_port.o.d ${OBJECTDIR}/RS_acc_mean.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o ${OBJECTDIR}/RS_acc_mean_table.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o
 
 # Source Files
-SOURCEFILES=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s RS_acc_mean_table.s
+SOURCEFILES=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s
 
 
 CFLAGS=
@@ -213,13 +213,6 @@ ${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean.s  -o ${OBJECTDIR}/RS_acc_mean.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
 	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/RS_acc_mean_table.o: RS_acc_mean_table.s  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o.d 
-	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o 
-	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean_table.s  -o ${OBJECTDIR}/RS_acc_mean_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean_table.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
-	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean_table.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -227,13 +220,6 @@ ${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/RS_acc_mean.o 
 	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean.s  -o ${OBJECTDIR}/RS_acc_mean.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
 	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/RS_acc_mean_table.o: RS_acc_mean_table.s  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o.d 
-	@${RM} ${OBJECTDIR}/RS_acc_mean_table.o 
-	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean_table.s  -o ${OBJECTDIR}/RS_acc_mean_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/RS_acc_mean_table.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
-	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean_table.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
 	
 endif
 

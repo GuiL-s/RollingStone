@@ -1,7 +1,5 @@
-
 .section .RS_utiliy
 .text
-.include "RS_acc_mean_table.s"
 .global _RS_acc_mean
 _RS_acc_mean:
     ;W0 : DATA*
