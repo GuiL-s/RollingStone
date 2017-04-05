@@ -5,10 +5,12 @@
 #define DATA_RANGE  16
 const int RS_acc_mean_table[DATA_RANGE] __attribute__ ((space(ymemory), aligned(32)))=
     {
-    0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006, 0x0007, 
-    0x0008, 0x0009, 0x000A, 0x000B, 0x000C, 0x000D, 0x000E, 0x000F
-    } ;
-    
+        //signed <1-1/14>
+        //1/1 , 1/2,    1/3,    1/4,    1/5,    1/6,    1/7,  , 1/8  
+        0x4000, 0x2000, 0x1555, 0x1000, 0x0CCC, 0x0AAB, 0x0925, 0x0800, 
+        //1/9,  1/10,   1/11,   1/12,   1/13,   1/14,   1/15,   1/16 Deuxieme ligne a redefinir
+        0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0400
+    }; //signed <1-1/14>
 
 int RS_acc_mean(int* data, int data_length);
 #endif //_RS_ACCELEROMETER_UTILITIES

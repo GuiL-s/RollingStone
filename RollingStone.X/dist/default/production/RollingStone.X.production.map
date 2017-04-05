@@ -1,3 +1,4 @@
+Microchip Technology Inc, v¨ƒÎ
 
 Tool Name:
   c:\program files (x86)\microchip\xc16\v1.21\bin\bin\..\bin/elf-ld.exe
@@ -103,17 +104,21 @@ section                    address   length (PC units)   length (bytes) (dec)
 .text                        0x100               0x488           0x6cc  (1740)
 .text                        0x588               0x5ce           0x8b5  (2229)
 .dinit                       0xb56                0x44            0x66  (102)
-.text                        0xb9a                0x5a            0x87  (135)
+.text                        0xb9a                0x5e            0x8d  (141)
 
-                     Total program memory used (bytes):         0x106e  (4206) 2%
+                     Total program memory used (bytes):         0x1074  (4212) 2%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
+_04769AE058e4f176            0x800                   0            0x10  (16)
 .nbss                        0x810                   0             0xe  (14)
 .ndata                       0x81e                   0             0x2  (2)
+_04769C0058e4f176            0x820                   0            0x10  (16)
+_04769D2058e4f176            0x840                   0            0x10  (16)
+_0476996058e4f176           0x27c0                   0            0x20  (32)
 
                         Total data memory used (bytes):           0x60  (96) 1%
 
@@ -186,7 +191,7 @@ External Symbols in Program Memory (by address):
                   0x000b9a                  _e_init_acc
                   0x000ba2                  _e_get_acc
                   0x000bd0                  _RS_acc_mean
-                  0x000bea                  _main
+                  0x000bee                  _main
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
@@ -232,7 +237,7 @@ External Symbols in Program Memory (by name):
                   0x000314                  _e_set_speed_right
                   0x000376                  _e_set_steps_left
                   0x000390                  _e_set_steps_right
-                  0x000bea                  _main
+                  0x000bee                  _main
 
 Memory Configuration
 
@@ -429,7 +434,7 @@ userdata
  .debug_abbrev    0x00050f         0x8e build/default/production/_ext/250871475/e_init_port.o
  .debug_abbrev    0x00059d         0x14 build/default/production/RS_acc_mean.o
 
-.debug_line       0x000000        0xf0e
+.debug_line       0x000000        0xf10
  *(.debug_line)
  .debug_line      0x000000         0x50 build/default/production/main.o
  .debug_line      0x000050         0xb1 build/default/production/RS_motors.o
@@ -439,7 +444,7 @@ userdata
  .debug_line      0x00046d        0x4a7 build/default/production/_ext/250871475/e_motors.o
  .debug_line      0x000914        0x2e3 build/default/production/_ext/250871475/e_led.o
  .debug_line      0x000bf7        0x2d3 build/default/production/_ext/250871475/e_init_port.o
- .debug_line      0x000eca         0x44 build/default/production/RS_acc_mean.o
+ .debug_line      0x000eca         0x46 build/default/production/RS_acc_mean.o
 
 .debug_frame      0x000000        0x220
  *(.debug_frame)
@@ -1716,19 +1721,27 @@ __c30_signature
  __c30_signature
                   0x00044e          0x6 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
 
+_04769AE058e4f176
                     0x0800         0x10
+ _04769AE058e4f176
                     0x0800         0x10 build/default/production/RS_accelerometer.o
                     0x0800                  _acc_raw_X
 
+_04769C0058e4f176
                     0x0820         0x10
+ _04769C0058e4f176
                     0x0820         0x10 build/default/production/RS_accelerometer.o
                     0x0820                  _acc_raw_Y
 
+_04769D2058e4f176
                     0x0840         0x10
+ _04769D2058e4f176
                     0x0840         0x10 build/default/production/RS_accelerometer.o
                     0x0840                  _acc_raw_Z
 
+_0476996058e4f176
                     0x27c0         0x20
+ _0476996058e4f176
                     0x27c0         0x20 build/default/production/RS_accelerometer.o
                     0x27c0                  _RS_acc_mean_table
 
@@ -1762,11 +1775,11 @@ __c30_signature
 .dinit            0x000b56         0x44
  .dinit           0x000b56         0x44 data_init
 
-.text             0x000b9a         0x5a
+.text             0x000b9a         0x5e
  .text            0x000b9a         0x36 build/default/production/_ext/1017064210/e_accelerometer.o
                   0x000b9a                  _e_init_acc
                   0x000ba2                  _e_get_acc
- .text            0x000bd0         0x1a build/default/production/RS_acc_mean.o
+ .text            0x000bd0         0x1e build/default/production/RS_acc_mean.o
                   0x000bd0                  _RS_acc_mean
- .text            0x000bea          0xa build/default/production/main.o
-                  0x000bea                  _main
+ .text            0x000bee          0xa build/default/production/main.o
+                  0x000bee                  _main
