@@ -4,11 +4,8 @@
  *
  * Created on 29. mars 2017, 16:48
  */
-//#include "xc.h"
-#include <a_d/e_accelerometer.h>
+
 #include "RS_accelerometer.h"
-#include "RS_const.h"
-#include "RS_accelerometer_utility.h"
 
 int acc_raw_X[LENGHT_RAW_T]  __attribute__((space(xmemory), aligned(32)));
 int acc_raw_Y[LENGHT_RAW_T]  __attribute__((space(xmemory), aligned(32)));
@@ -24,5 +21,13 @@ void RS_acc_update(int* acc_T, int* speed_T) {
 }
 
 void RS_acc_speed_compensation(int* acc_T, int* speed_T) {
-    
+    int speedToAcc_T[LENGHT_SPEED_T];
+    RS_acc_speedToAcc(speed_T, speedToAcc_T);
+    acc_T[ID_ACC_X] += speedToAcc_T[ID_SPEED_ANG];
+    acc_T[ID_ACC_Y] += speedToAcc_T[ID_SPEED_LIN];
+}
+
+
+int RS_acc_speedToAcc(int *Speed_T, int *SpeedToAcc){
+    return 0;
 }

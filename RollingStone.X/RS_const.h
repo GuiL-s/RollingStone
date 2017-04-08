@@ -12,8 +12,9 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
+#define PRESCALER           256
 #define UPDATE_FREQUENCY    100 //[Hz]
-#define UPDATE_PERIOD    1e6/UPDATE_FREQUENCY //[microsecond]
+#define UPDATE_PERIOD       MILLISEC*1000/(PRESCALER*UPDATE_FREQUENCY) //[millisecond]
 
 #define LENGHT_ACC_T    2
 
