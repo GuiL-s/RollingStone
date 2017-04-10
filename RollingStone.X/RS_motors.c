@@ -33,10 +33,15 @@ int RS_mot_calcSpeedAng(int acc_X){
 }
 
 void RS_mot_setSpeed(int speed_lin, int speed_ang){
-    if (speed_lin < - MAX_SPEED) speed_lin = - MAX_SPEED;
-    if (speed_lin > MAX_SPEED) speed_lin = MAX_SPEED;
-    if (speed_ang < - MAX_SPEED) speed_ang = - MAX_SPEED;
-    if (speed_ang > MAX_SPEED) speed_ang = MAX_SPEED;
+    int speed_left = speed_lin + speed_ang;
+    int speed_right = speed_lin - speed_ang;
+    
+    if (speed_left < - MAX_SPEED) speed_left = - MAX_SPEED;
+    if (speed_left > MAX_SPEED) speed_left = MAX_SPEED;
+    if (speed_right < - MAX_SPEED) speed_right = - MAX_SPEED;
+    if (speed_right > MAX_SPEED) speed_right = MAX_SPEED;
+    
+    
     e_set_speed_left(speed_lin + speed_ang);
     e_set_speed_right(speed_lin - speed_ang);
 }

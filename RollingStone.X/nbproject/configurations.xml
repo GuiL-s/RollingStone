@@ -7,12 +7,13 @@
       <itemPath>RS_accelerometer.h</itemPath>
       <itemPath>RS_motor.h</itemPath>
       <itemPath>RS_const.h</itemPath>
-      <itemPath>../../library/a_d/e_accelerometer.h</itemPath>
-      <itemPath>../../library/a_d/e_ad_conv.h</itemPath>
-      <itemPath>../../library/motor_led/e_motors.h</itemPath>
-      <itemPath>../../library/motor_led/e_epuck_ports.h</itemPath>
       <itemPath>RS_accelerometer_utility.h</itemPath>
-      <itemPath>../../library/motor_led/e_init_port.h</itemPath>
+      <itemPath>C:/Users/GuiLs/Documents/GitHub/library/a_d/e_accelerometer.h</itemPath>
+      <itemPath>C:/Users/GuiLs/Documents/GitHub/library/a_d/e_ad_conv.h</itemPath>
+      <itemPath>C:/Users/GuiLs/Documents/GitHub/library/motor_led/e_epuck_ports.h</itemPath>
+      <itemPath>C:/Users/GuiLs/Documents/GitHub/library/motor_led/e_init_port.h</itemPath>
+      <itemPath>C:/Users/GuiLs/Documents/GitHub/library/motor_led/e_motors.h</itemPath>
+      <itemPath>C:/Users/GuiLs/Documents/GitHub/library/uart/e_uart_char.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -30,6 +31,10 @@
       <itemPath>../../library/motor_led/e_led.c</itemPath>
       <itemPath>../../library/motor_led/e_init_port.c</itemPath>
       <itemPath>RS_acc_mean.s</itemPath>
+      <itemPath>../../library/uart/e_uart1_tx_char.s</itemPath>
+      <itemPath>../../library/uart/e_uart1_rx_char.s</itemPath>
+      <itemPath>../../library/uart/e_init_uart1.s</itemPath>
+      <itemPath>../../library/matlab/matlab.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -41,6 +46,8 @@
     <Elem>../library</Elem>
     <Elem>../../library/a_d</Elem>
     <Elem>../../library/motor_led</Elem>
+    <Elem>../../library/uart</Elem>
+    <Elem>../../library/matlab</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -225,7 +232,7 @@
         <property key="OUTPUT COMPARE 8" value="true"/>
         <property key="SPI 1" value="true"/>
         <property key="SPI 2" value="true"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="SecureSegment.SegmentProgramming" value="SegmentProgrammingAll"/>
         <property key="TIMER1" value="true"/>
         <property key="TIMER2" value="true"/>
         <property key="TIMER3" value="true"/>
@@ -236,6 +243,7 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

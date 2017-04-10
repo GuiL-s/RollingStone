@@ -1,6 +1,6 @@
-build/default/production/main.o:  \
+build/default/debug/main.o:  \
 main.c  \
- ../../library/motor_led/e_init_port.h  \
+../../library/motor_led/e_init_port.h  \
  ../../library/motor_led/e_epuck_ports.h  \
  ../../library/motor_led/e_motors.h  \
 ../../library/a_d/e_ad_conv.h  \

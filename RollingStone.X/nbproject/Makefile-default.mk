@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s
+SOURCEFILES_QUOTED_IF_SPACED=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s ../../library/uart/e_uart1_tx_char.s ../../library/uart/e_uart1_rx_char.s ../../library/uart/e_init_uart1.s ../../library/matlab/matlab.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RS_motors.o.d ${OBJECTDIR}/RS_accelerometer.o.d ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d ${OBJECTDIR}/_ext/250871475/e_motors.o.d ${OBJECTDIR}/_ext/250871475/e_led.o.d ${OBJECTDIR}/_ext/250871475/e_init_port.o.d ${OBJECTDIR}/RS_acc_mean.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o ${OBJECTDIR}/_ext/1288412767/matlab.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RS_motors.o.d ${OBJECTDIR}/RS_accelerometer.o.d ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o.d ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o.d ${OBJECTDIR}/_ext/250871475/e_motors.o.d ${OBJECTDIR}/_ext/250871475/e_led.o.d ${OBJECTDIR}/_ext/250871475/e_init_port.o.d ${OBJECTDIR}/RS_acc_mean.o.d ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d ${OBJECTDIR}/_ext/1288412767/matlab.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RS_motors.o ${OBJECTDIR}/RS_accelerometer.o ${OBJECTDIR}/_ext/1017064210/e_ad_conv.o ${OBJECTDIR}/_ext/1017064210/e_accelerometer.o ${OBJECTDIR}/_ext/250871475/e_motors.o ${OBJECTDIR}/_ext/250871475/e_led.o ${OBJECTDIR}/_ext/250871475/e_init_port.o ${OBJECTDIR}/RS_acc_mean.o ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o ${OBJECTDIR}/_ext/1288412767/matlab.o
 
 # Source Files
-SOURCEFILES=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s
+SOURCEFILES=main.c RS_motors.c RS_accelerometer.c ../../library/a_d/e_ad_conv.c ../../library/a_d/e_accelerometer.c ../../library/motor_led/e_motors.c ../../library/motor_led/e_led.c ../../library/motor_led/e_init_port.c RS_acc_mean.s ../../library/uart/e_uart1_tx_char.s ../../library/uart/e_uart1_rx_char.s ../../library/uart/e_init_uart1.s ../../library/matlab/matlab.c
 
 
 CFLAGS=
@@ -144,6 +144,13 @@ ${OBJECTDIR}/_ext/250871475/e_init_port.o: ../../library/motor_led/e_init_port.c
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_init_port.c  -o ${OBJECTDIR}/_ext/250871475/e_init_port.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_init_port.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -I"../../library/a_d" -I"../../library/motor_led" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_init_port.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1288412767/matlab.o: ../../library/matlab/matlab.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1288412767" 
+	@${RM} ${OBJECTDIR}/_ext/1288412767/matlab.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1288412767/matlab.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/matlab/matlab.c  -o ${OBJECTDIR}/_ext/1288412767/matlab.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1288412767/matlab.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -I"../../library/a_d" -I"../../library/motor_led" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1288412767/matlab.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -201,6 +208,13 @@ ${OBJECTDIR}/_ext/250871475/e_init_port.o: ../../library/motor_led/e_init_port.c
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/motor_led/e_init_port.c  -o ${OBJECTDIR}/_ext/250871475/e_init_port.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/250871475/e_init_port.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -I"../../library/a_d" -I"../../library/motor_led" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/250871475/e_init_port.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1288412767/matlab.o: ../../library/matlab/matlab.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1288412767" 
+	@${RM} ${OBJECTDIR}/_ext/1288412767/matlab.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1288412767/matlab.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../library/matlab/matlab.c  -o ${OBJECTDIR}/_ext/1288412767/matlab.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1288412767/matlab.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -I"../../library" -I"../../library/a_d" -I"../../library/motor_led" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1288412767/matlab.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -213,6 +227,27 @@ ${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean.s  -o ${OBJECTDIR}/RS_acc_mean.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/RS_acc_mean.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
 	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o: ../../library/uart/e_uart1_tx_char.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1464817730" 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../../library/uart/e_uart1_tx_char.s  -o ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o: ../../library/uart/e_uart1_rx_char.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1464817730" 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../../library/uart/e_uart1_rx_char.s  -o ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1464817730/e_init_uart1.o: ../../library/uart/e_init_uart1.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1464817730" 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../../library/uart/e_init_uart1.s  -o ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -220,6 +255,27 @@ ${OBJECTDIR}/RS_acc_mean.o: RS_acc_mean.s  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/RS_acc_mean.o 
 	${MP_CC} $(MP_EXTRA_AS_PRE)  RS_acc_mean.s  -o ${OBJECTDIR}/RS_acc_mean.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/RS_acc_mean.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
 	@${FIXDEPS} "${OBJECTDIR}/RS_acc_mean.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o: ../../library/uart/e_uart1_tx_char.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1464817730" 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../../library/uart/e_uart1_tx_char.s  -o ${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1464817730/e_uart1_tx_char.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o: ../../library/uart/e_uart1_rx_char.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1464817730" 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../../library/uart/e_uart1_rx_char.s  -o ${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1464817730/e_uart1_rx_char.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1464817730/e_init_uart1.o: ../../library/uart/e_init_uart1.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1464817730" 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  ../../library/uart/e_init_uart1.s  -o ${OBJECTDIR}/_ext/1464817730/e_init_uart1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"../../library" -Wa,-MD,"${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1464817730/e_init_uart1.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
 	
 endif
 
