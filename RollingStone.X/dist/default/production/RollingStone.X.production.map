@@ -1,4 +1,4 @@
-Microchip Technology Inc, v¸ƒ}
+Microchip Technology Inc, v¸ƒ¶
 
 Tool Name:
   c:\program files (x86)\microchip\xc16\v1.21\bin\bin\..\bin/elf-ld.exe
@@ -113,14 +113,14 @@ Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-_047EFAE058e8b223            0x800                   0            0x10  (16)
+_0478BC6058eb3804            0x800                   0            0x10  (16)
 .nbss                        0x810                   0             0xc  (12)
 .nbss                        0x81c                   0             0x2  (2)
 .ndata                       0x81e                   0             0x2  (2)
-_047EFC0058e8b223            0x820                   0            0x10  (16)
+_0478BD8058eb3804            0x820                   0            0x10  (16)
 .nbss                        0x830                   0             0x8  (8)
-_047EFD2058e8b223            0x840                   0            0x10  (16)
-_0492A24058e8b223           0x27c0                   0            0x20  (32)
+_0478BEA058eb3804            0x840                   0            0x10  (16)
+_0478BB4058eb3804           0x27c0                   0            0x20  (32)
 
                         Total data memory used (bytes):           0x68  (104) 1%
 
@@ -425,9 +425,9 @@ userdata
 
 .debug_info       0x000000       0x2e8a
  *(.debug_info)
- .debug_info      0x000000        0x625 build/default/production/main.o
- .debug_info      0x000625        0x202 build/default/production/RS_motors.o
- .debug_info      0x000827        0x275 build/default/production/RS_accelerometer.o
+ .debug_info      0x000000        0x5f0 build/default/production/main.o
+ .debug_info      0x0005f0        0x202 build/default/production/RS_motors.o
+ .debug_info      0x0007f2        0x2aa build/default/production/RS_accelerometer.o
  .debug_info      0x000a9c        0x66a build/default/production/_ext/1017064210/e_ad_conv.o
  .debug_info      0x001106        0x25c build/default/production/_ext/1017064210/e_accelerometer.o
  .debug_info      0x001362        0xa91 build/default/production/_ext/250871475/e_motors.o
@@ -438,9 +438,9 @@ userdata
 
 .debug_abbrev     0x000000        0x6b7
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x11d build/default/production/main.o
- .debug_abbrev    0x00011d         0x8b build/default/production/RS_motors.o
- .debug_abbrev    0x0001a8         0xcc build/default/production/RS_accelerometer.o
+ .debug_abbrev    0x000000        0x116 build/default/production/main.o
+ .debug_abbrev    0x000116         0x8b build/default/production/RS_motors.o
+ .debug_abbrev    0x0001a1         0xd3 build/default/production/RS_accelerometer.o
  .debug_abbrev    0x000274         0xef build/default/production/_ext/1017064210/e_ad_conv.o
  .debug_abbrev    0x000363         0xd6 build/default/production/_ext/1017064210/e_accelerometer.o
  .debug_abbrev    0x000439        0x139 build/default/production/_ext/250871475/e_motors.o
@@ -491,11 +491,11 @@ userdata
                   0x000000        0x325
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x64 build/default/production/main.o
+                  0x000000         0x4e build/default/production/main.o
  .debug_pubnames
-                  0x000064         0x6d build/default/production/RS_motors.o
+                  0x00004e         0x6d build/default/production/RS_motors.o
  .debug_pubnames
-                  0x0000d1         0x8d build/default/production/RS_accelerometer.o
+                  0x0000bb         0xa3 build/default/production/RS_accelerometer.o
  .debug_pubnames
                   0x00015e         0x2e build/default/production/_ext/1017064210/e_ad_conv.o
  .debug_pubnames
@@ -1736,28 +1736,28 @@ __c30_signature
  __c30_signature
                   0x0004a6          0x6 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
 
-_047EFAE058e8b223
+_0478BC6058eb3804
                     0x0800         0x10
- _047EFAE058e8b223
+ _0478BC6058eb3804
                     0x0800         0x10 build/default/production/RS_accelerometer.o
                     0x0800                  _acc_raw_X
 
-_047EFC0058e8b223
+_0478BD8058eb3804
                     0x0820         0x10
- _047EFC0058e8b223
+ _0478BD8058eb3804
                     0x0820         0x10 build/default/production/RS_accelerometer.o
                     0x0820                  _acc_raw_Y
 
-_047EFD2058e8b223
+_0478BEA058eb3804
                     0x0840         0x10
- _047EFD2058e8b223
+ _0478BEA058eb3804
                     0x0840         0x10 build/default/production/RS_accelerometer.o
                     0x0840                  _acc_raw_Z
 
-_0492A24058e8b223
+_0478BB4058eb3804
                     0x27c0         0x20
- _0492A24058e8b223
-                    0x27c0         0x20 build/default/production/main.o
+ _0478BB4058eb3804
+                    0x27c0         0x20 build/default/production/RS_accelerometer.o
                     0x27c0                  _RS_acc_mean_table
 
 .nbss               0x0810          0xc
