@@ -24,7 +24,7 @@ int acc_T[LENGHT_ACC_T];
 int speed_T[LENGHT_SPEED_T];
 
 #define SIZE_DATA 128
-int acc_x[SIZE_DATA];
+int  acc_x[SIZE_DATA];
 int acc_y[SIZE_DATA];
 int acc_z[SIZE_DATA];
 
