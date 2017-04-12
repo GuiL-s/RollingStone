@@ -11,20 +11,26 @@
 #define	RS_CONST_H  
 
 #include <xc.h> // include processor files - each processor file is guarded.  
-    
-#define ID_ACC_X    0
-#define ID_ACC_Y    1
-#define ID_ACC_Z    2
+
+#define PRESCALER           256
+#define UPDATE_FREQUENCY    10 //[Hz]
+#define UPDATE_PERIOD       (MILLISEC*1000)/(PRESCALER*UPDATE_FREQUENCY) //[millisecond]
+
+#define LENGHT_ACC_T    2
+
+#define ID_ACC_X        0
+#define ID_ACC_Y        1
+#define ID_ACC_Z        2
+
+#define LENGHT_SPEED_T  2
+
+#define ID_SPEED_LIN    0
+#define ID_SPEED_ANG    1
 
 
-#define LENGHT_SPEED 5
-    
-#define ID_SPPED    1
+#define MAX_INT  32767 
+#define MIN_INT  -32768
 
-
-#ifdef	__cplusplus
-}
-#endif /* __cplusplus */
 
 #endif	/* XC_CONST_H */
 
