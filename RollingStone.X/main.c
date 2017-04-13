@@ -46,7 +46,7 @@ void RS_init(void){
     e_init_acc();
 	e_init_ad();
     int i;
-    //for (i=0; i< LENGHT_RAW_T; i++) RS_acc_get();
+    for (i=0; i< LENGHT_RAW_T; i++) RS_acc_get();
     Init_TMR2();
 }
 

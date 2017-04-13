@@ -24,10 +24,7 @@ void RS_acc_get(void){
     else buff_P=0;
 }
 
-void RS_acc_update(int* acc_T, int* acc_prev_T) {
-    int comp;
-    comp=acc_T[ID_ACC_Y];
-    
+void RS_acc_update(int* acc_T, int* acc_prev_T) {    
     acc_prev_T[ID_ACC_X] = acc_T[ID_ACC_X];
     acc_prev_T[ID_ACC_Y] = acc_T[ID_ACC_Y];
     acc_prev_T[ID_ACC_Z] = acc_T[ID_ACC_Z];
@@ -36,7 +33,9 @@ void RS_acc_update(int* acc_T, int* acc_prev_T) {
     acc_T[ID_ACC_Y] = RS_acc_mean(acc_raw_Y, LENGHT_RAW_T) - ACC_ZERO;
     acc_T[ID_ACC_Z] = RS_acc_mean(acc_raw_Z, LENGHT_RAW_T) - ACC_ZERO;
     
-    if((acc_T[ID_ACC_Y]-comp)>SHOCK || (acc_T[ID_ACC_Y]-comp)<-SHOCK) LED6=1;
+    long norm = RS_acc_norm(acc_T);
+    if(norm>SHOCK) LED5=1;
+    else LED5=0;
 }
 
 long RS_acc_I(int acc_Y){

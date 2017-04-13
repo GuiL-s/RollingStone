@@ -17,7 +17,7 @@
 
 #define LENGHT_RAW_T    60
 #define ACC_ZERO        2048
-#define SHOCK           0x80
+#define SHOCK           3000
 
 void RS_acc_get(void);
 

@@ -19,8 +19,8 @@
 
 #define K_ANG       3
 
-#define KP          150
-#define KD          200
+#define KP          200
+#define KD          1000
 #define KI          2
 
 #define SP_TO_ACC   1
