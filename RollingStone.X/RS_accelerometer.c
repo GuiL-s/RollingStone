@@ -39,7 +39,7 @@ void RS_acc_update(int* acc_T, int* speed_T) {
     acc_T[ID_ACC_X] = RS_acc_mean(acc_raw_X, LENGHT_RAW_T) - ACC_ZERO + 26;//acc_raw_X[buff_P] - ACC_ZERO;//
     acc_T[ID_ACC_Y] = RS_acc_mean(acc_raw_Y, LENGHT_RAW_T) - ACC_ZERO -36;//acc_raw_Y[buff_P] - ACC_ZERO;//
     acc_T[ID_ACC_Z] = RS_acc_mean(acc_raw_Z, LENGHT_RAW_T) - ACC_ZERO;//acc_raw_Z[buff_P] - ACC_ZERO;//
-    if(abs(acc_T[ID_ACC_Y]-comp)>0x80) LED6=1;
+    if((acc_T[ID_ACC_Y]-comp)>0x80||(acc_T[ID_ACC_Y]-comp)<-0x80) LED6=1;
 }
 
 void RS_acc_speed_compensation(int* acc_T, int* speed_T) {
