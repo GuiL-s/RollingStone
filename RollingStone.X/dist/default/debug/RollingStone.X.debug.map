@@ -1,4 +1,4 @@
-Microchip Technology Inc, v°ˆ³
+Microchip Technology Inc, vx‰»
 
 Tool Name:
   c:\program files (x86)\microchip\xc16\v1.21\bin\bin\..\bin/elf-ld.exe
@@ -6,7 +6,7 @@ Tool Name:
 Command:
   -p30F6014A \
   -o \
-  dist/default/production/RollingStone.X.production.elf \
+  dist/default/debug/RollingStone.X.debug.elf \
   -Lc:/program files (x86)/microchip/xc16/v1.21/bin/bin/.. \
   -Lc:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib \
   -Lc:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib/PIC24E \
@@ -21,20 +21,24 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib/dsPIC33F \
   -Lc:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/main.o \
-  build/default/production/RS_motors.o \
-  build/default/production/RS_accelerometer.o \
-  build/default/production/library/uart/e_init_uart1.o \
-  build/default/production/library/uart/e_uart1_rx_char.o \
-  build/default/production/library/uart/e_uart1_tx_char.o \
-  build/default/production/library/motor_led/e_init_port.o \
-  build/default/production/library/motor_led/e_motors.o \
-  build/default/production/library/a_d/e_accelerometer.o \
-  build/default/production/library/a_d/e_ad_conv.o \
-  build/default/production/library/matlab/matlab.o \
-  build/default/production/RS_accelerometer_utility.o \
-  build/default/production/RS_debug.o \
+  build/default/debug/main.o \
+  build/default/debug/RS_motors.o \
+  build/default/debug/RS_accelerometer.o \
+  build/default/debug/library/uart/e_init_uart1.o \
+  build/default/debug/library/uart/e_uart1_rx_char.o \
+  build/default/debug/library/uart/e_uart1_tx_char.o \
+  build/default/debug/library/motor_led/e_init_port.o \
+  build/default/debug/library/motor_led/e_motors.o \
+  build/default/debug/library/a_d/e_accelerometer.o \
+  build/default/debug/library/a_d/e_ad_conv.o \
+  build/default/debug/library/matlab/matlab.o \
+  build/default/debug/RS_accelerometer_utility.o \
+  build/default/debug/RS_debug.o \
   --defsym=__MPLAB_BUILD=1 \
+  --defsym=__ICD2RAM=1 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
   -Tp30F6014A.gld.00 \
   --stack=16 \
   --check-sections \
@@ -47,7 +51,7 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/production/RollingStone.X.production.map \
+  -Map=dist/default/debug/RollingStone.X.debug.map \
   --report-mem \
   -start-group \
   --library=fx-elf \
@@ -63,13 +67,13 @@ c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libpic30-elf.a(crt
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
                               c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o) (__data_init_standard)
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(divsf3.eo)
-                              build/default/production/library/motor_led/e_motors.o (___divsf3)
+                              build/default/debug/library/motor_led/e_motors.o (___divsf3)
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(divsi3.eo)
-                              build/default/production/RS_motors.o (___divsi3)
+                              build/default/debug/RS_motors.o (___divsi3)
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
-                              build/default/production/library/motor_led/e_motors.o (___fixunssfsi)
+                              build/default/debug/library/motor_led/e_motors.o (___fixunssfsi)
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(floatsisf.eo)
-                              build/default/production/library/motor_led/e_motors.o (___floatsisf)
+                              build/default/debug/library/motor_led/e_motors.o (___floatsisf)
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(fpack.eo)
                               c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(divsf3.eo) (__fpack)
 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(funpack.eo)
@@ -122,18 +126,20 @@ Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-_047FBBA058ef827c            0x800                   0            0x78  (120)
-.ndata                       0x878                   0             0x8  (8)
-_047FBCC058ef827c            0x880                   0            0x78  (120)
-.data                        0x8f8                   0             0x6  (6)
-.ndata                       0x8fe                   0             0x2  (2)
-_047FBDE058ef827c            0x900                   0            0x78  (120)
-.nbss                        0x978                   0           0x300  (768)
-.data                        0xc78                   0            0x44  (68)
-.nbss                        0xcbc                   0            0x20  (32)
-.nbss                        0xcdc                   0             0x4  (4)
+.icd                         0x800                0x50            0x50  (80)
+.nbss                        0x850                   0             0xc  (12)
+.nbss                        0x85c                   0             0x4  (4)
+_0476BBA058ef8280            0x860                   0            0x78  (120)
+.ndata                       0x8d8                   0             0x8  (8)
+_0476BCC058ef8280            0x8e0                   0            0x78  (120)
+.data                        0x958                   0             0x6  (6)
+.ndata                       0x95e                   0             0x2  (2)
+_0476BDE058ef8280            0x960                   0            0x78  (120)
+.nbss                        0x9d8                   0           0x300  (768)
+.data                        0xcd8                   0            0x44  (68)
+.nbss                        0xd1c                   0            0x14  (20)
 
-                        Total data memory used (bytes):          0x4e0  (1248) 15%
+                        Total data memory used (bytes):          0x530  (1328) 16%
 
 
 Dynamic Memory Usage
@@ -141,56 +147,56 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xce0                              0x1b20  (6944)
+stack                        0xd30                              0x1ad0  (6864)
 
-                        Maximum dynamic memory (bytes):         0x1b20  (6944)
+                        Maximum dynamic memory (bytes):         0x1ad0  (6864)
 
 
 External Symbols in Data Memory (by address):
 
-                    0x0800                  _acc_raw_X
-                    0x0878                  _buff_P
-                    0x087a                  _sum_acc
-                    0x087e                  _Da_prev
-                    0x0880                  _acc_raw_Y
-                    0x08f8                  U1TXPtr
-                    0x08fa                  U1TXLength
-                    0x08fc                  U1TXOk
-                    0x08fe                  _sense_next
-                    0x0900                  _acc_raw_Z
-                    0x0978                  _acc_x
-                    0x0a78                  _acc_y
-                    0x0b78                  _acc_z
-                    0x0c78                  _U1RXBuf
-                    0x0cb8                  _U1RXRcvCnt
-                    0x0cba                  _U1RXReadCnt
-                    0x0cbc                  _acc_T
-                    0x0cc2                  _speed_T
-                    0x0cc6                  _acc_prev_T
-                    0x0ccc                  _speed_prev_T
+                    0x0860                  _acc_raw_X
+                    0x08d8                  _buff_P
+                    0x08da                  _sum_acc
+                    0x08de                  _Da_prev
+                    0x08e0                  _acc_raw_Y
+                    0x0958                  U1TXPtr
+                    0x095a                  U1TXLength
+                    0x095c                  U1TXOk
+                    0x095e                  _sense_next
+                    0x0960                  _acc_raw_Z
+                    0x09d8                  _acc_x
+                    0x0ad8                  _acc_y
+                    0x0bd8                  _acc_z
+                    0x0cd8                  _U1RXBuf
+                    0x0d18                  _U1RXRcvCnt
+                    0x0d1a                  _U1RXReadCnt
+                    0x0d1c                  _acc_T
+                    0x0d22                  _speed_T
+                    0x0d26                  _acc_prev_T
+                    0x0d2c                  _speed_prev_T
 
 External Symbols in Data Memory (by name):
 
-                    0x08fa                  U1TXLength
-                    0x08fc                  U1TXOk
-                    0x08f8                  U1TXPtr
-                    0x087e                  _Da_prev
-                    0x0c78                  _U1RXBuf
-                    0x0cb8                  _U1RXRcvCnt
-                    0x0cba                  _U1RXReadCnt
-                    0x0cbc                  _acc_T
-                    0x0cc6                  _acc_prev_T
-                    0x0800                  _acc_raw_X
-                    0x0880                  _acc_raw_Y
-                    0x0900                  _acc_raw_Z
-                    0x0978                  _acc_x
-                    0x0a78                  _acc_y
-                    0x0b78                  _acc_z
-                    0x0878                  _buff_P
-                    0x08fe                  _sense_next
-                    0x0cc2                  _speed_T
-                    0x0ccc                  _speed_prev_T
-                    0x087a                  _sum_acc
+                    0x095a                  U1TXLength
+                    0x095c                  U1TXOk
+                    0x0958                  U1TXPtr
+                    0x08de                  _Da_prev
+                    0x0cd8                  _U1RXBuf
+                    0x0d18                  _U1RXRcvCnt
+                    0x0d1a                  _U1RXReadCnt
+                    0x0d1c                  _acc_T
+                    0x0d26                  _acc_prev_T
+                    0x0860                  _acc_raw_X
+                    0x08e0                  _acc_raw_Y
+                    0x0960                  _acc_raw_Z
+                    0x09d8                  _acc_x
+                    0x0ad8                  _acc_y
+                    0x0bd8                  _acc_z
+                    0x08d8                  _buff_P
+                    0x095e                  _sense_next
+                    0x0d22                  _speed_T
+                    0x0d2c                  _speed_prev_T
+                    0x08da                  _sum_acc
 
 External Symbols in Program Memory (by address):
 
@@ -347,20 +353,24 @@ FICD             0xf8000c           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/main.o
-LOAD build/default/production/RS_motors.o
-LOAD build/default/production/RS_accelerometer.o
-LOAD build/default/production/library/uart/e_init_uart1.o
-LOAD build/default/production/library/uart/e_uart1_rx_char.o
-LOAD build/default/production/library/uart/e_uart1_tx_char.o
-LOAD build/default/production/library/motor_led/e_init_port.o
-LOAD build/default/production/library/motor_led/e_motors.o
-LOAD build/default/production/library/a_d/e_accelerometer.o
-LOAD build/default/production/library/a_d/e_ad_conv.o
-LOAD build/default/production/library/matlab/matlab.o
-LOAD build/default/production/RS_accelerometer_utility.o
-LOAD build/default/production/RS_debug.o
+LOAD build/default/debug/main.o
+LOAD build/default/debug/RS_motors.o
+LOAD build/default/debug/RS_accelerometer.o
+LOAD build/default/debug/library/uart/e_init_uart1.o
+LOAD build/default/debug/library/uart/e_uart1_rx_char.o
+LOAD build/default/debug/library/uart/e_uart1_tx_char.o
+LOAD build/default/debug/library/motor_led/e_init_port.o
+LOAD build/default/debug/library/motor_led/e_motors.o
+LOAD build/default/debug/library/a_d/e_accelerometer.o
+LOAD build/default/debug/library/a_d/e_ad_conv.o
+LOAD build/default/debug/library/matlab/matlab.o
+LOAD build/default/debug/RS_accelerometer_utility.o
+LOAD build/default/debug/RS_debug.o
                     0x0001                  __MPLAB_BUILD = 0x1
+                    0x0001                  __ICD2RAM = 0x1
+                    0x0001                  __MPLAB_DEBUG = 0x1
+                    0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib/dsPIC30F\libp30F6014A-elf.a
                     0x8005c0                  __FUID0 = 0x8005c0
                     0x8005c2                  __FUID1 = 0x8005c2
@@ -399,7 +409,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib/dsPIC30F\libp
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x000194        0x20c build/default/production/library/motor_led/e_motors.o
+ .isr.text        0x000194        0x20c build/default/debug/library/motor_led/e_motors.o
                   0x000194                  __T5Interrupt
                   0x000224                  __T4Interrupt
                   0x0002b4                  _e_init_motors
@@ -467,15 +477,15 @@ __FUID3
 
 __FOSC            0xf80000          0x2
  *(__FOSC.sec*)
- __FOSC.sec       0xf80000          0x2 build/default/production/library/motor_led/e_init_port.o
+ __FOSC.sec       0xf80000          0x2 build/default/debug/library/motor_led/e_init_port.o
 
 __FWDT            0xf80002          0x2
  *(__FWDT.sec*)
- __FWDT.sec       0xf80002          0x2 build/default/production/library/motor_led/e_init_port.o
+ __FWDT.sec       0xf80002          0x2 build/default/debug/library/motor_led/e_init_port.o
 
 __FBORPOR         0xf80004          0x2
  *(__FBORPOR.sec*)
- __FBORPOR.sec    0xf80004          0x2 build/default/production/library/motor_led/e_init_port.o
+ __FBORPOR.sec    0xf80004          0x2 build/default/debug/library/motor_led/e_init_port.o
 
 __FBS
  *(__FBS.sec*)
@@ -494,6 +504,10 @@ __FICD
 user_eedata
  *(user_eedata)
 
+.icd                0x0800         0x50
+                    0x0850                  . = (. + DEFINED (__ICD2RAM)?0x50:0x0)
+ *fill*             0x0800         0x5000
+
 userdata
  *(userdata)
 
@@ -502,77 +516,77 @@ userdata
 
 .debug_info       0x000000       0x3a10
  *(.debug_info)
- .debug_info      0x000000        0x665 build/default/production/main.o
- .debug_info      0x000665        0x320 build/default/production/RS_motors.o
- .debug_info      0x000985        0x390 build/default/production/RS_accelerometer.o
- .debug_info      0x000d15         0xa5 build/default/production/library/uart/e_init_uart1.o
- .debug_info      0x000dba         0xa8 build/default/production/library/uart/e_uart1_rx_char.o
- .debug_info      0x000e62         0xa8 build/default/production/library/uart/e_uart1_tx_char.o
- .debug_info      0x000f0a        0xc9a build/default/production/library/motor_led/e_init_port.o
- .debug_info      0x001ba4        0xa8b build/default/production/library/motor_led/e_motors.o
- .debug_info      0x00262f        0x256 build/default/production/library/a_d/e_accelerometer.o
- .debug_info      0x002885        0x664 build/default/production/library/a_d/e_ad_conv.o
- .debug_info      0x002ee9        0x37e build/default/production/library/matlab/matlab.o
- .debug_info      0x003267        0x13c build/default/production/RS_accelerometer_utility.o
- .debug_info      0x0033a3        0x66d build/default/production/RS_debug.o
+ .debug_info      0x000000        0x665 build/default/debug/main.o
+ .debug_info      0x000665        0x320 build/default/debug/RS_motors.o
+ .debug_info      0x000985        0x390 build/default/debug/RS_accelerometer.o
+ .debug_info      0x000d15         0xa5 build/default/debug/library/uart/e_init_uart1.o
+ .debug_info      0x000dba         0xa8 build/default/debug/library/uart/e_uart1_rx_char.o
+ .debug_info      0x000e62         0xa8 build/default/debug/library/uart/e_uart1_tx_char.o
+ .debug_info      0x000f0a        0xc9a build/default/debug/library/motor_led/e_init_port.o
+ .debug_info      0x001ba4        0xa8b build/default/debug/library/motor_led/e_motors.o
+ .debug_info      0x00262f        0x256 build/default/debug/library/a_d/e_accelerometer.o
+ .debug_info      0x002885        0x664 build/default/debug/library/a_d/e_ad_conv.o
+ .debug_info      0x002ee9        0x37e build/default/debug/library/matlab/matlab.o
+ .debug_info      0x003267        0x13c build/default/debug/RS_accelerometer_utility.o
+ .debug_info      0x0033a3        0x66d build/default/debug/RS_debug.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x967
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x15c build/default/production/main.o
- .debug_abbrev    0x00015c         0xab build/default/production/RS_motors.o
- .debug_abbrev    0x000207        0x12a build/default/production/RS_accelerometer.o
- .debug_abbrev    0x000331         0x14 build/default/production/library/uart/e_init_uart1.o
- .debug_abbrev    0x000345         0x14 build/default/production/library/uart/e_uart1_rx_char.o
- .debug_abbrev    0x000359         0x14 build/default/production/library/uart/e_uart1_tx_char.o
- .debug_abbrev    0x00036d         0x8e build/default/production/library/motor_led/e_init_port.o
- .debug_abbrev    0x0003fb        0x139 build/default/production/library/motor_led/e_motors.o
- .debug_abbrev    0x000534         0xd6 build/default/production/library/a_d/e_accelerometer.o
- .debug_abbrev    0x00060a         0xef build/default/production/library/a_d/e_ad_conv.o
- .debug_abbrev    0x0006f9         0xdd build/default/production/library/matlab/matlab.o
- .debug_abbrev    0x0007d6         0x5f build/default/production/RS_accelerometer_utility.o
- .debug_abbrev    0x000835        0x132 build/default/production/RS_debug.o
+ .debug_abbrev    0x000000        0x15c build/default/debug/main.o
+ .debug_abbrev    0x00015c         0xab build/default/debug/RS_motors.o
+ .debug_abbrev    0x000207        0x12a build/default/debug/RS_accelerometer.o
+ .debug_abbrev    0x000331         0x14 build/default/debug/library/uart/e_init_uart1.o
+ .debug_abbrev    0x000345         0x14 build/default/debug/library/uart/e_uart1_rx_char.o
+ .debug_abbrev    0x000359         0x14 build/default/debug/library/uart/e_uart1_tx_char.o
+ .debug_abbrev    0x00036d         0x8e build/default/debug/library/motor_led/e_init_port.o
+ .debug_abbrev    0x0003fb        0x139 build/default/debug/library/motor_led/e_motors.o
+ .debug_abbrev    0x000534         0xd6 build/default/debug/library/a_d/e_accelerometer.o
+ .debug_abbrev    0x00060a         0xef build/default/debug/library/a_d/e_ad_conv.o
+ .debug_abbrev    0x0006f9         0xdd build/default/debug/library/matlab/matlab.o
+ .debug_abbrev    0x0007d6         0x5f build/default/debug/RS_accelerometer_utility.o
+ .debug_abbrev    0x000835        0x132 build/default/debug/RS_debug.o
 
 .debug_line       0x000000       0x1478
  *(.debug_line)
- .debug_line      0x000000        0x182 build/default/production/main.o
- .debug_line      0x000182        0x185 build/default/production/RS_motors.o
- .debug_line      0x000307        0x17e build/default/production/RS_accelerometer.o
- .debug_line      0x000485         0x5e build/default/production/library/uart/e_init_uart1.o
- .debug_line      0x0004e3         0x6a build/default/production/library/uart/e_uart1_rx_char.o
- .debug_line      0x00054d         0x7c build/default/production/library/uart/e_uart1_tx_char.o
- .debug_line      0x0005c9        0x2cd build/default/production/library/motor_led/e_init_port.o
- .debug_line      0x000896        0x4a1 build/default/production/library/motor_led/e_motors.o
- .debug_line      0x000d37        0x105 build/default/production/library/a_d/e_accelerometer.o
- .debug_line      0x000e3c        0x1af build/default/production/library/a_d/e_ad_conv.o
- .debug_line      0x000feb        0x273 build/default/production/library/matlab/matlab.o
- .debug_line      0x00125e         0x7c build/default/production/RS_accelerometer_utility.o
- .debug_line      0x0012da        0x19e build/default/production/RS_debug.o
+ .debug_line      0x000000        0x182 build/default/debug/main.o
+ .debug_line      0x000182        0x185 build/default/debug/RS_motors.o
+ .debug_line      0x000307        0x17e build/default/debug/RS_accelerometer.o
+ .debug_line      0x000485         0x5e build/default/debug/library/uart/e_init_uart1.o
+ .debug_line      0x0004e3         0x6a build/default/debug/library/uart/e_uart1_rx_char.o
+ .debug_line      0x00054d         0x7c build/default/debug/library/uart/e_uart1_tx_char.o
+ .debug_line      0x0005c9        0x2cd build/default/debug/library/motor_led/e_init_port.o
+ .debug_line      0x000896        0x4a1 build/default/debug/library/motor_led/e_motors.o
+ .debug_line      0x000d37        0x105 build/default/debug/library/a_d/e_accelerometer.o
+ .debug_line      0x000e3c        0x1af build/default/debug/library/a_d/e_ad_conv.o
+ .debug_line      0x000feb        0x273 build/default/debug/library/matlab/matlab.o
+ .debug_line      0x00125e         0x7c build/default/debug/RS_accelerometer_utility.o
+ .debug_line      0x0012da        0x19e build/default/debug/RS_debug.o
 
 .debug_frame      0x000000        0x308
  *(.debug_frame)
- .debug_frame     0x000000         0x54 build/default/production/main.o
- .debug_frame     0x000054         0x64 build/default/production/RS_motors.o
- .debug_frame     0x0000b8         0x54 build/default/production/RS_accelerometer.o
- .debug_frame     0x00010c         0x24 build/default/production/library/motor_led/e_init_port.o
- .debug_frame     0x000130         0xa4 build/default/production/library/motor_led/e_motors.o
- .debug_frame     0x0001d4         0x34 build/default/production/library/a_d/e_accelerometer.o
- .debug_frame     0x000208         0x34 build/default/production/library/a_d/e_ad_conv.o
- .debug_frame     0x00023c         0x54 build/default/production/library/matlab/matlab.o
- .debug_frame     0x000290         0x24 build/default/production/RS_accelerometer_utility.o
- .debug_frame     0x0002b4         0x54 build/default/production/RS_debug.o
+ .debug_frame     0x000000         0x54 build/default/debug/main.o
+ .debug_frame     0x000054         0x64 build/default/debug/RS_motors.o
+ .debug_frame     0x0000b8         0x54 build/default/debug/RS_accelerometer.o
+ .debug_frame     0x00010c         0x24 build/default/debug/library/motor_led/e_init_port.o
+ .debug_frame     0x000130         0xa4 build/default/debug/library/motor_led/e_motors.o
+ .debug_frame     0x0001d4         0x34 build/default/debug/library/a_d/e_accelerometer.o
+ .debug_frame     0x000208         0x34 build/default/debug/library/a_d/e_ad_conv.o
+ .debug_frame     0x00023c         0x54 build/default/debug/library/matlab/matlab.o
+ .debug_frame     0x000290         0x24 build/default/debug/RS_accelerometer_utility.o
+ .debug_frame     0x0002b4         0x54 build/default/debug/RS_debug.o
 
 .debug_str        0x000000        0x1a1
  *(.debug_str)
- .debug_str       0x000000         0x34 build/default/production/main.o
- .debug_str       0x000034         0x28 build/default/production/RS_motors.o
- .debug_str       0x00005c         0x27 build/default/production/RS_accelerometer.o
- .debug_str       0x000083         0x5f build/default/production/library/motor_led/e_init_port.o
- .debug_str       0x0000e2         0x51 build/default/production/library/motor_led/e_motors.o
- .debug_str       0x000133          0xa build/default/production/library/a_d/e_accelerometer.o
- .debug_str       0x00013d         0x1f build/default/production/library/a_d/e_ad_conv.o
- .debug_str       0x00015c         0x1e build/default/production/library/matlab/matlab.o
- .debug_str       0x00017a         0x27 build/default/production/RS_debug.o
+ .debug_str       0x000000         0x34 build/default/debug/main.o
+ .debug_str       0x000034         0x28 build/default/debug/RS_motors.o
+ .debug_str       0x00005c         0x27 build/default/debug/RS_accelerometer.o
+ .debug_str       0x000083         0x5f build/default/debug/library/motor_led/e_init_port.o
+ .debug_str       0x0000e2         0x51 build/default/debug/library/motor_led/e_motors.o
+ .debug_str       0x000133          0xa build/default/debug/library/a_d/e_accelerometer.o
+ .debug_str       0x00013d         0x1f build/default/debug/library/a_d/e_ad_conv.o
+ .debug_str       0x00015c         0x1e build/default/debug/library/matlab/matlab.o
+ .debug_str       0x00017a         0x27 build/default/debug/RS_debug.o
 
 .debug_loc
  *(.debug_loc)
@@ -584,25 +598,25 @@ userdata
                   0x000000        0x424
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x7c build/default/production/main.o
+                  0x000000         0x7c build/default/debug/main.o
  .debug_pubnames
-                  0x00007c         0x7c build/default/production/RS_motors.o
+                  0x00007c         0x7c build/default/debug/RS_motors.o
  .debug_pubnames
-                  0x0000f8         0x9a build/default/production/RS_accelerometer.o
+                  0x0000f8         0x9a build/default/debug/RS_accelerometer.o
  .debug_pubnames
-                  0x000192         0x4c build/default/production/library/motor_led/e_init_port.o
+                  0x000192         0x4c build/default/debug/library/motor_led/e_init_port.o
  .debug_pubnames
-                  0x0001de         0xc7 build/default/production/library/motor_led/e_motors.o
+                  0x0001de         0xc7 build/default/debug/library/motor_led/e_motors.o
  .debug_pubnames
-                  0x0002a5         0x2f build/default/production/library/a_d/e_accelerometer.o
+                  0x0002a5         0x2f build/default/debug/library/a_d/e_accelerometer.o
  .debug_pubnames
-                  0x0002d4         0x2e build/default/production/library/a_d/e_ad_conv.o
+                  0x0002d4         0x2e build/default/debug/library/a_d/e_ad_conv.o
  .debug_pubnames
-                  0x000302         0x82 build/default/production/library/matlab/matlab.o
+                  0x000302         0x82 build/default/debug/library/matlab/matlab.o
  .debug_pubnames
-                  0x000384         0x22 build/default/production/RS_accelerometer_utility.o
+                  0x000384         0x22 build/default/debug/RS_accelerometer_utility.o
  .debug_pubnames
-                  0x0003a6         0x7e build/default/production/RS_debug.o
+                  0x0003a6         0x7e build/default/debug/RS_debug.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -610,31 +624,31 @@ userdata
 .debug_aranges    0x000000        0x138
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/main.o
+                  0x000000         0x18 build/default/debug/main.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/RS_motors.o
+                  0x000018         0x18 build/default/debug/RS_motors.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/RS_accelerometer.o
+                  0x000030         0x18 build/default/debug/RS_accelerometer.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/library/uart/e_init_uart1.o
+                  0x000048         0x18 build/default/debug/library/uart/e_init_uart1.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/library/uart/e_uart1_rx_char.o
+                  0x000060         0x18 build/default/debug/library/uart/e_uart1_rx_char.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/library/uart/e_uart1_tx_char.o
+                  0x000078         0x18 build/default/debug/library/uart/e_uart1_tx_char.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/library/motor_led/e_init_port.o
+                  0x000090         0x18 build/default/debug/library/motor_led/e_init_port.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/library/motor_led/e_motors.o
+                  0x0000a8         0x18 build/default/debug/library/motor_led/e_motors.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/library/a_d/e_accelerometer.o
+                  0x0000c0         0x18 build/default/debug/library/a_d/e_accelerometer.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/production/library/a_d/e_ad_conv.o
+                  0x0000d8         0x18 build/default/debug/library/a_d/e_ad_conv.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/production/library/matlab/matlab.o
+                  0x0000f0         0x18 build/default/debug/library/matlab/matlab.o
  .debug_aranges
-                  0x000108         0x18 build/default/production/RS_accelerometer_utility.o
+                  0x000108         0x18 build/default/debug/RS_accelerometer_utility.o
  .debug_aranges
-                  0x000120         0x18 build/default/production/RS_debug.o
+                  0x000120         0x18 build/default/debug/RS_debug.o
 
 .ivt              0x000004         0x7c
                   0x000004          0x4 LONG 0x3a0 DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
@@ -1776,7 +1790,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libpic30-elf.
 LOAD c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libc-elf.a
 END GROUP
-OUTPUT(dist/default/production/RollingStone.X.production.elf elf32-pic30)
+OUTPUT(dist/default/debug/RollingStone.X.debug.elf elf32-pic30)
 LOAD FGS
 LOAD default_isr
 LOAD data_init
@@ -1784,46 +1798,46 @@ LOAD data_init
 .debug_pubtypes
                   0x000138        0x3cd
  .debug_pubtypes
-                  0x000138         0x6b build/default/production/main.o
+                  0x000138         0x6b build/default/debug/main.o
  .debug_pubtypes
-                  0x0001a3         0x12 build/default/production/RS_motors.o
+                  0x0001a3         0x12 build/default/debug/RS_motors.o
  .debug_pubtypes
-                  0x0001b5         0x2f build/default/production/RS_accelerometer.o
+                  0x0001b5         0x2f build/default/debug/RS_accelerometer.o
  .debug_pubtypes
-                  0x0001e4        0x13e build/default/production/library/motor_led/e_init_port.o
+                  0x0001e4        0x13e build/default/debug/library/motor_led/e_init_port.o
  .debug_pubtypes
-                  0x000322         0xa7 build/default/production/library/motor_led/e_motors.o
+                  0x000322         0xa7 build/default/debug/library/motor_led/e_motors.o
  .debug_pubtypes
-                  0x0003c9         0x31 build/default/production/library/a_d/e_accelerometer.o
+                  0x0003c9         0x31 build/default/debug/library/a_d/e_accelerometer.o
  .debug_pubtypes
-                  0x0003fa         0x71 build/default/production/library/a_d/e_ad_conv.o
+                  0x0003fa         0x71 build/default/debug/library/a_d/e_ad_conv.o
  .debug_pubtypes
-                  0x00046b         0x2f build/default/production/library/matlab/matlab.o
+                  0x00046b         0x2f build/default/debug/library/matlab/matlab.o
  .debug_pubtypes
-                  0x00049a         0x6b build/default/production/RS_debug.o
+                  0x00049a         0x6b build/default/debug/RS_debug.o
 
 __c30_signature
                   0x000506         0x8a
  __c30_signature
-                  0x000506          0x6 build/default/production/main.o
+                  0x000506          0x6 build/default/debug/main.o
  __c30_signature
-                  0x00050c          0x6 build/default/production/RS_motors.o
+                  0x00050c          0x6 build/default/debug/RS_motors.o
  __c30_signature
-                  0x000512          0x6 build/default/production/RS_accelerometer.o
+                  0x000512          0x6 build/default/debug/RS_accelerometer.o
  __c30_signature
-                  0x000518          0x6 build/default/production/library/motor_led/e_init_port.o
+                  0x000518          0x6 build/default/debug/library/motor_led/e_init_port.o
  __c30_signature
-                  0x00051e          0x6 build/default/production/library/motor_led/e_motors.o
+                  0x00051e          0x6 build/default/debug/library/motor_led/e_motors.o
  __c30_signature
-                  0x000524          0x6 build/default/production/library/a_d/e_accelerometer.o
+                  0x000524          0x6 build/default/debug/library/a_d/e_accelerometer.o
  __c30_signature
-                  0x00052a          0x6 build/default/production/library/a_d/e_ad_conv.o
+                  0x00052a          0x6 build/default/debug/library/a_d/e_ad_conv.o
  __c30_signature
-                  0x000530          0x6 build/default/production/library/matlab/matlab.o
+                  0x000530          0x6 build/default/debug/library/matlab/matlab.o
  __c30_signature
-                  0x000536          0x6 build/default/production/RS_accelerometer_utility.o
+                  0x000536          0x6 build/default/debug/RS_accelerometer_utility.o
  __c30_signature
-                  0x00053c          0x6 build/default/production/RS_debug.o
+                  0x00053c          0x6 build/default/debug/RS_debug.o
  __c30_signature
                   0x000542          0x6 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -1851,115 +1865,117 @@ __c30_signature
  __c30_signature
                   0x00058a          0x6 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
 
-_047FBBA058ef827c
-                    0x0800         0x78
- _047FBBA058ef827c
-                    0x0800         0x78 build/default/production/RS_accelerometer.o
-                    0x0800                  _acc_raw_X
+_0476BBA058ef8280
+                    0x0860         0x78
+ _0476BBA058ef8280
+                    0x0860         0x78 build/default/debug/RS_accelerometer.o
+                    0x0860                  _acc_raw_X
 
-_047FBCC058ef827c
-                    0x0880         0x78
- _047FBCC058ef827c
-                    0x0880         0x78 build/default/production/RS_accelerometer.o
-                    0x0880                  _acc_raw_Y
+_0476BCC058ef8280
+                    0x08e0         0x78
+ _0476BCC058ef8280
+                    0x08e0         0x78 build/default/debug/RS_accelerometer.o
+                    0x08e0                  _acc_raw_Y
 
-_047FBDE058ef827c
-                    0x0900         0x78
- _047FBDE058ef827c
-                    0x0900         0x78 build/default/production/RS_accelerometer.o
-                    0x0900                  _acc_raw_Z
+_0476BDE058ef8280
+                    0x0960         0x78
+ _0476BDE058ef8280
+                    0x0960         0x78 build/default/debug/RS_accelerometer.o
+                    0x0960                  _acc_raw_Z
 
-.nbss               0x0978        0x300
- .nbss              0x0978        0x300 build/default/production/RS_debug.o
-                    0x0978                  _acc_x
-                    0x0a78                  _acc_y
-                    0x0b78                  _acc_z
+.nbss               0x09d8        0x300
+ .nbss              0x09d8        0x300 build/default/debug/RS_debug.o
+                    0x09d8                  _acc_x
+                    0x0ad8                  _acc_y
+                    0x0bd8                  _acc_z
 
-.data               0x0c78         0x44
- .data              0x0c78         0x44 build/default/production/library/uart/e_uart1_rx_char.o
-                    0x0c78                  _U1RXBuf
-                    0x0cb8                  _U1RXRcvCnt
-                    0x0cba                  _U1RXReadCnt
+.data               0x0cd8         0x44
+ .data              0x0cd8         0x44 build/default/debug/library/uart/e_uart1_rx_char.o
+                    0x0cd8                  _U1RXBuf
+                    0x0d18                  _U1RXRcvCnt
+                    0x0d1a                  _U1RXReadCnt
 
-.nbss               0x0cbc         0x20
- .nbss              0x0cbc         0x14 build/default/production/main.o
-                    0x0cbc                  _acc_T
-                    0x0cc2                  _speed_T
-                    0x0cc6                  _acc_prev_T
-                    0x0ccc                  _speed_prev_T
- .nbss              0x0cd0          0xc build/default/production/library/motor_led/e_motors.o
+.nbss               0x0d1c         0x14
+ .nbss              0x0d1c         0x14 build/default/debug/main.o
+                    0x0d1c                  _acc_T
+                    0x0d22                  _speed_T
+                    0x0d26                  _acc_prev_T
+                    0x0d2c                  _speed_prev_T
 
-.ndata              0x0878          0x8
- .ndata             0x0878          0x8 build/default/production/RS_accelerometer.o
-                    0x0878                  _buff_P
-                    0x087a                  _sum_acc
-                    0x087e                  _Da_prev
+.nbss               0x0850          0xc
+ .nbss              0x0850          0xc build/default/debug/library/motor_led/e_motors.o
 
-.data               0x08f8          0x6
- .data              0x08f8          0x6 build/default/production/library/uart/e_uart1_tx_char.o
-                    0x08f8                  U1TXPtr
-                    0x08fa                  U1TXLength
-                    0x08fc                  U1TXOk
+.ndata              0x08d8          0x8
+ .ndata             0x08d8          0x8 build/default/debug/RS_accelerometer.o
+                    0x08d8                  _buff_P
+                    0x08da                  _sum_acc
+                    0x08de                  _Da_prev
 
-.nbss               0x0cdc          0x4
- .nbss              0x0cdc          0x4 build/default/production/RS_motors.o
+.data               0x0958          0x6
+ .data              0x0958          0x6 build/default/debug/library/uart/e_uart1_tx_char.o
+                    0x0958                  U1TXPtr
+                    0x095a                  U1TXLength
+                    0x095c                  U1TXOk
 
-.ndata              0x08fe          0x2
- .ndata             0x08fe          0x2 build/default/production/RS_debug.o
-                    0x08fe                  _sense_next
+.nbss               0x085c          0x4
+ .nbss              0x085c          0x4 build/default/debug/RS_motors.o
+
+.ndata              0x095e          0x2
+ .ndata             0x095e          0x2 build/default/debug/RS_debug.o
+                    0x095e                  _sense_next
 
 .const              0x85c6          0xa load address 0x0005c6  
- .const             0x85c6          0xa build/default/production/library/matlab/matlab.o
+ .const             0x85c6          0xa build/default/debug/library/matlab/matlab.o
 
 .text             0x0005d0        0x568
- .text            0x0005d0        0x1ce build/default/production/library/matlab/matlab.o
+ .text            0x0005d0        0x1ce build/default/debug/library/matlab/matlab.o
                   0x0005d0                  _e_send_int_to_matlab
                   0x0005fe                  _e_send_char_to_matlab
                   0x000624                  _e_receive_int_from_matlab
                   0x000716                  _e_receive_char_from_matlab
- .text            0x00079e        0x16a build/default/production/RS_motors.o
+ .text            0x00079e        0x16a build/default/debug/RS_motors.o
                   0x00079e                  _RS_mot_updateSpeed
                   0x0007fa                  _RS_mot_calcSpeedLin
                   0x000834                  _RS_mot_calcSpeedAng
                   0x000848                  _RS_mot_setSpeed
                   0x00089c                  _RS_mot_PID
- .text            0x000908         0xfa build/default/production/RS_accelerometer.o
+ .text            0x000908         0xfa build/default/debug/RS_accelerometer.o
                   0x000908                  _RS_acc_get
                   0x000948                  _RS_acc_update
                   0x0009ce                  _RS_acc_I
                   0x0009ec                  _RS_acc_D
- .text            0x000a02         0xac build/default/production/RS_debug.o
+ .text            0x000a02         0xac build/default/debug/RS_debug.o
                   0x000a02                  _matlab_uart
                   0x000a6e                  _init_TMR1
                   0x000a8e                  __T1Interrupt
                   0x000aa4                  _init_matlab
- .text            0x000aae         0x8a build/default/production/library/motor_led/e_init_port.o
+ .text            0x000aae         0x8a build/default/debug/library/motor_led/e_init_port.o
                   0x000aae                  _e_init_port
 
 .dinit            0x000b38         0x7e
  .dinit           0x000b38         0x7e data_init
 
 .text             0x000bb6        0x22c
- .text            0x000bb6         0x78 build/default/production/library/a_d/e_ad_conv.o
+ .text            0x000bb6         0x78 build/default/debug/library/a_d/e_ad_conv.o
                   0x000bb6                  _e_init_ad
                   0x000bf2                  _e_read_ad
- .text            0x000c2e         0x68 build/default/production/main.o
+ .text            0x000c2e         0x68 build/default/debug/main.o
                   0x000c2e                  _Init_TMR2
                   0x000c4e                  __T2Interrupt
                   0x000c7e                  _RS_init
                   0x000c8e                  _main
- .text            0x000c96         0x60 build/default/production/library/uart/e_uart1_tx_char.o
+ .text            0x000c96         0x60 build/default/debug/library/uart/e_uart1_tx_char.o
                   0x000c96                  __U1TXInterrupt
                   0x000cda                  _e_send_uart1_char
                   0x000cf2                  _e_uart1_sending
- .text            0x000cf6         0x4c build/default/production/RS_accelerometer_utility.o
+ .text            0x000cf6         0x4c build/default/debug/RS_accelerometer_utility.o
                   0x000cf6                  _RS_acc_mean
- .text            0x000d42         0x3c build/default/production/library/uart/e_uart1_rx_char.o
+ .text            0x000d42         0x3c build/default/debug/library/uart/e_uart1_rx_char.o
                   0x000d42                  __U1RXInterrupt
                   0x000d5a                  _e_ischar_uart1
                   0x000d62                  _e_getchar_uart1
- .text            0x000d7e         0x36 build/default/production/library/a_d/e_accelerometer.o
+ .text            0x000d7e         0x36 build/default/debug/library/a_d/e_accelerometer.o
                   0x000d7e                  _e_init_acc
                   0x000d86                  _e_get_acc
- .text            0x000db4         0x2e build/default/production/library/uart/e_init_uart1.o
+ .text            0x000db4         0x2e build/default/debug/library/uart/e_init_uart1.o
                   0x000db4                  _e_init_uart1

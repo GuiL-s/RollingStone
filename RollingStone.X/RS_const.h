@@ -15,8 +15,8 @@
 #define PRESCALER           256
 #define UPDATE_FREQUENCY    10 //[Hz]
 #define UPDATE_PERIOD       (MILLISEC*1000)/(PRESCALER*UPDATE_FREQUENCY) //[millisecond]
-#define DT                  1/UPDATE_FREQUENCY
-#define LENGHT_ACC_T    2
+
+#define LENGHT_ACC_T    3
 
 #define ID_ACC_X        0
 #define ID_ACC_Y        1

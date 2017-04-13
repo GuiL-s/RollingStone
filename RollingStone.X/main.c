@@ -35,17 +35,19 @@ void Init_TMR2() {
 }
 
 void _ISR __attribute__((no_auto_psv)) _T2Interrupt(void) {
-    RS_acc_update(acc_T, acc_prev_T, speed_T, speed_prev_T);
+    RS_acc_update(acc_T, acc_prev_T);
     RS_mot_updateSpeed(acc_T, acc_prev_T, speed_T, speed_prev_T);
     IFS0bits.T2IF = 0; // clear interrupt flag
     TMR2 = 0; // clear timer5
 }
 void RS_init(void){
-    Init_TMR2();
     e_init_port();
     e_init_motors();
     e_init_acc();
 	e_init_ad();
+    int i;
+    //for (i=0; i< LENGHT_RAW_T; i++) RS_acc_get();
+    Init_TMR2();
 }
 
 int main(void) {

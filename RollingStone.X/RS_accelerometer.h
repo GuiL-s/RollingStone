@@ -21,7 +21,7 @@
 
 void RS_acc_get(void);
 
-void RS_acc_update(int* acc_T, int* acc_prev_T, int* speed_T, int* speed_prev_T);
+void RS_acc_update(int* acc_T, int* acc_prev_T);
 
 long RS_acc_I(int acc_Y);
 
