@@ -15,6 +15,7 @@
       <itemPath>library/motor_led/e_motors.h</itemPath>
       <itemPath>library/uart/e_uart_char.h</itemPath>
       <itemPath>library/matlab/matlab.h</itemPath>
+      <itemPath>RS_debug.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -35,6 +36,7 @@
       <itemPath>library/a_d/e_ad_conv.c</itemPath>
       <itemPath>library/matlab/matlab.c</itemPath>
       <itemPath>RS_accelerometer_utility.c</itemPath>
+      <itemPath>RS_debug.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

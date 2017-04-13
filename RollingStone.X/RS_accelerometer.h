@@ -16,14 +16,15 @@
 #include "RS_accelerometer_utility.h"
 
 #define LENGHT_RAW_T    60
-#define ACC_ZERO    2048
+#define ACC_ZERO        2048
+#define SHOCK           0x80
 
 void RS_acc_get(void);
 
-void RS_acc_update(int* acc_T, int* speed_T);
+void RS_acc_update(int* acc_T, int* acc_prev_T, int* speed_T, int* speed_prev_T);
 
-void RS_acc_speed_compensation(int* acc_T, int* speed_T);
+long RS_acc_I(int acc_Y);
 
-int RS_acc_speedToAcc(int *Speed_T, int *SpeedToAcc);
+int RS_acc_D(int Da);
 
 #endif
