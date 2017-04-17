@@ -4,14 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_const.h</file>
-            <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_accelerometer.h</file>
             <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/main.c</file>
-            <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_accelerometer_utility.c</file>
-            <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_accelerometer.c</file>
             <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_motors.c</file>
-            <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_motor.h</file>
-            <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/RS_accelerometer_utility.h</file>
-            <file>file:/C:/Users/GuiLs/Documents/GitHub/RollingStone/RollingStone.X/library/a_d/e_ad_conv.c</file>
         </group>
     </open-files>
 </project-private>

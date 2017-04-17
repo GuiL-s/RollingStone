@@ -1,4 +1,4 @@
-Microchip Technology Inc, v ˆ‚
+Microchip Technology Inc, v°ˆÃ
 
 Tool Name:
   c:\program files (x86)\microchip\xc16\v1.21\bin\bin\..\bin/elf-ld.exe
@@ -111,29 +111,29 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x4c6           0x729  (1833)
 .const                       0x5c6                 0xa             0xf  (15)
-.text                        0x5d0               0x67a           0x9b7  (2487)
-.dinit                       0xc4a                0x7e            0xbd  (189)
-.text                        0xcc8               0x1f2           0x2eb  (747)
+.text                        0x5d0               0x5e6           0x8d9  (2265)
+.dinit                       0xbb6                0x7e            0xbd  (189)
+.text                        0xc34               0x1f0           0x2e8  (744)
 
-                     Total program memory used (bytes):         0x1497  (5271) 3%
+                     Total program memory used (bytes):         0x13b6  (5046) 3%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-_0481BC0058ef896f            0x800                   0            0x78  (120)
+_04757C0058f4dd64            0x800                   0            0x78  (120)
 .ndata                       0x878                   0             0x8  (8)
-_0481BD2058ef896f            0x880                   0            0x78  (120)
+_04757D2058f4dd64            0x880                   0            0x78  (120)
 .data                        0x8f8                   0             0x6  (6)
 .ndata                       0x8fe                   0             0x2  (2)
-_0481BE4058ef896f            0x900                   0            0x78  (120)
+_04757E4058f4dd64            0x900                   0            0x78  (120)
 .nbss                        0x978                   0           0x300  (768)
 .data                        0xc78                   0            0x44  (68)
-.nbss                        0xcbc                   0            0x20  (32)
-.nbss                        0xcdc                   0             0x4  (4)
+.nbss                        0xcbc                   0            0x1c  (28)
+.nbss                        0xcd8                   0             0x4  (4)
 
-                        Total data memory used (bytes):          0x4e0  (1248) 15%
+                        Total data memory used (bytes):          0x4dc  (1244) 15%
 
 
 Dynamic Memory Usage
@@ -141,9 +141,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xce0                              0x1b20  (6944)
+stack                        0xcdc                              0x1b24  (6948)
 
-                        Maximum dynamic memory (bytes):         0x1b20  (6944)
+                        Maximum dynamic memory (bytes):         0x1b24  (6948)
 
 
 External Symbols in Data Memory (by address):
@@ -167,7 +167,6 @@ External Symbols in Data Memory (by address):
                     0x0cbc                  _acc_T
                     0x0cc2                  _speed_T
                     0x0cc6                  _acc_prev_T
-                    0x0ccc                  _speed_prev_T
 
 External Symbols in Data Memory (by name):
 
@@ -189,7 +188,6 @@ External Symbols in Data Memory (by name):
                     0x0878                  _buff_P
                     0x08fe                  _sense_next
                     0x0cc2                  _speed_T
-                    0x0ccc                  _speed_prev_T
                     0x087a                  _sum_acc
 
 External Symbols in Program Memory (by address):
@@ -226,61 +224,61 @@ External Symbols in Program Memory (by address):
                   0x000624                  _e_receive_int_from_matlab
                   0x000716                  _e_receive_char_from_matlab
                   0x00079e                  _RS_mot_updateSpeed
-                  0x0007fa                  _RS_mot_calcSpeedLin
-                  0x000834                  _RS_mot_calcSpeedAng
-                  0x000848                  _RS_mot_setSpeed
-                  0x00089c                  _RS_mot_PID
-                  0x000908                  _RS_acc_mean
-                  0x000954                  _RS_acc_norm
-                  0x000a30                  _RS_acc_get
-                  0x000a70                  _RS_acc_update
-                  0x000ae0                  _RS_acc_I
-                  0x000afe                  _RS_acc_D
-                  0x000b14                  _matlab_uart
-                  0x000b80                  _init_TMR1
-                  0x000ba0                  __T1Interrupt
-                  0x000bb6                  _init_matlab
-                  0x000bc0                  _e_init_port
-                  0x000cc8                  _Init_TMR2
-                  0x000ce8                  __T2Interrupt
-                  0x000d18                  _RS_init
-                  0x000d3a                  _main
-                  0x000d42                  _e_init_ad
-                  0x000d7e                  _e_read_ad
-                  0x000dba                  __U1TXInterrupt
-                  0x000dfe                  _e_send_uart1_char
-                  0x000e16                  _e_uart1_sending
-                  0x000e1a                  __U1RXInterrupt
-                  0x000e32                  _e_ischar_uart1
-                  0x000e3a                  _e_getchar_uart1
-                  0x000e56                  _e_init_acc
-                  0x000e5e                  _e_get_acc
-                  0x000e8c                  _e_init_uart1
+                  0x0007de                  _RS_mot_calcSpeedLin
+                  0x000814                  _RS_mot_calcSpeedAng
+                  0x000828                  _RS_mot_setSpeed
+                  0x00087c                  _RS_mot_PID
+                  0x0008e6                  _RS_acc_get
+                  0x000926                  _RS_acc_update
+                  0x0009a2                  _RS_acc_I
+                  0x0009c0                  _RS_acc_D
+                  0x0009d6                  _matlab_uart
+                  0x000a42                  _init_TMR1
+                  0x000a62                  __T1Interrupt
+                  0x000a78                  _init_matlab
+                  0x000a82                  _RS_acc_mean
+                  0x000ace                  _RS_acc_norm
+                  0x000b2c                  _e_init_port
+                  0x000c34                  _Init_TMR2
+                  0x000c54                  __T2Interrupt
+                  0x000c82                  _RS_init
+                  0x000ca4                  _main
+                  0x000cac                  _e_init_ad
+                  0x000ce8                  _e_read_ad
+                  0x000d24                  __U1TXInterrupt
+                  0x000d68                  _e_send_uart1_char
+                  0x000d80                  _e_uart1_sending
+                  0x000d84                  __U1RXInterrupt
+                  0x000d9c                  _e_ischar_uart1
+                  0x000da4                  _e_getchar_uart1
+                  0x000dc0                  _e_init_acc
+                  0x000dc8                  _e_get_acc
+                  0x000df6                  _e_init_uart1
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x000cc8                  _Init_TMR2
-                  0x000afe                  _RS_acc_D
-                  0x000ae0                  _RS_acc_I
-                  0x000a30                  _RS_acc_get
-                  0x000908                  _RS_acc_mean
-                  0x000954                  _RS_acc_norm
-                  0x000a70                  _RS_acc_update
-                  0x000d18                  _RS_init
-                  0x00089c                  _RS_mot_PID
-                  0x000834                  _RS_mot_calcSpeedAng
-                  0x0007fa                  _RS_mot_calcSpeedLin
-                  0x000848                  _RS_mot_setSpeed
+                  0x000c34                  _Init_TMR2
+                  0x0009c0                  _RS_acc_D
+                  0x0009a2                  _RS_acc_I
+                  0x0008e6                  _RS_acc_get
+                  0x000a82                  _RS_acc_mean
+                  0x000ace                  _RS_acc_norm
+                  0x000926                  _RS_acc_update
+                  0x000c82                  _RS_init
+                  0x00087c                  _RS_mot_PID
+                  0x000814                  _RS_mot_calcSpeedAng
+                  0x0007de                  _RS_mot_calcSpeedLin
+                  0x000828                  _RS_mot_setSpeed
                   0x00079e                  _RS_mot_updateSpeed
                   0x0003a0                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
-                  0x000ba0                  __T1Interrupt
-                  0x000ce8                  __T2Interrupt
+                  0x000a62                  __T1Interrupt
+                  0x000c54                  __T2Interrupt
                   0x000224                  __T4Interrupt
                   0x000194                  __T5Interrupt
-                  0x000e1a                  __U1RXInterrupt
-                  0x000dba                  __U1TXInterrupt
+                  0x000d84                  __U1RXInterrupt
+                  0x000d24                  __U1TXInterrupt
                   0x0003a4                  ___divsf3
                   0x000428                  ___divsi3
                   0x000446                  ___fixunssfsi
@@ -298,31 +296,31 @@ External Symbols in Program Memory (by name):
                   0x0004f8                  __funpack2
                   0x000126                  __psv_init
                   0x000100                  __resetPRI
-                  0x000e5e                  _e_get_acc
+                  0x000dc8                  _e_get_acc
                   0x00036c                  _e_get_steps_left
                   0x000386                  _e_get_steps_right
-                  0x000e3a                  _e_getchar_uart1
-                  0x000e56                  _e_init_acc
-                  0x000d42                  _e_init_ad
+                  0x000da4                  _e_getchar_uart1
+                  0x000dc0                  _e_init_acc
+                  0x000cac                  _e_init_ad
                   0x0002b4                  _e_init_motors
-                  0x000bc0                  _e_init_port
-                  0x000e8c                  _e_init_uart1
-                  0x000e32                  _e_ischar_uart1
-                  0x000d7e                  _e_read_ad
+                  0x000b2c                  _e_init_port
+                  0x000df6                  _e_init_uart1
+                  0x000d9c                  _e_ischar_uart1
+                  0x000ce8                  _e_read_ad
                   0x000716                  _e_receive_char_from_matlab
                   0x000624                  _e_receive_int_from_matlab
                   0x0005fe                  _e_send_char_to_matlab
                   0x0005d0                  _e_send_int_to_matlab
-                  0x000dfe                  _e_send_uart1_char
+                  0x000d68                  _e_send_uart1_char
                   0x0002bc                  _e_set_speed_left
                   0x000314                  _e_set_speed_right
                   0x000376                  _e_set_steps_left
                   0x000390                  _e_set_steps_right
-                  0x000e16                  _e_uart1_sending
-                  0x000b80                  _init_TMR1
-                  0x000bb6                  _init_matlab
-                  0x000d3a                  _main
-                  0x000b14                  _matlab_uart
+                  0x000d80                  _e_uart1_sending
+                  0x000a42                  _init_TMR1
+                  0x000a78                  _init_matlab
+                  0x000ca4                  _main
+                  0x0009d6                  _matlab_uart
 
 Memory Configuration
 
@@ -502,21 +500,21 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3a8e
+.debug_info       0x000000       0x3a48
  *(.debug_info)
- .debug_info      0x000000        0x668 build/default/production/main.o
- .debug_info      0x000668        0x320 build/default/production/RS_motors.o
- .debug_info      0x000988        0x381 build/default/production/RS_accelerometer.o
- .debug_info      0x000d09         0xa5 build/default/production/library/uart/e_init_uart1.o
- .debug_info      0x000dae         0xa8 build/default/production/library/uart/e_uart1_rx_char.o
- .debug_info      0x000e56         0xa8 build/default/production/library/uart/e_uart1_tx_char.o
- .debug_info      0x000efe        0xc9a build/default/production/library/motor_led/e_init_port.o
- .debug_info      0x001b98        0xa8b build/default/production/library/motor_led/e_motors.o
- .debug_info      0x002623        0x256 build/default/production/library/a_d/e_accelerometer.o
- .debug_info      0x002879        0x664 build/default/production/library/a_d/e_ad_conv.o
- .debug_info      0x002edd        0x37e build/default/production/library/matlab/matlab.o
- .debug_info      0x00325b        0x1c6 build/default/production/RS_accelerometer_utility.o
- .debug_info      0x003421        0x66d build/default/production/RS_debug.o
+ .debug_info      0x000000        0x649 build/default/production/main.o
+ .debug_info      0x000649        0x2ed build/default/production/RS_motors.o
+ .debug_info      0x000936        0x38d build/default/production/RS_accelerometer.o
+ .debug_info      0x000cc3         0xa5 build/default/production/library/uart/e_init_uart1.o
+ .debug_info      0x000d68         0xa8 build/default/production/library/uart/e_uart1_rx_char.o
+ .debug_info      0x000e10         0xa8 build/default/production/library/uart/e_uart1_tx_char.o
+ .debug_info      0x000eb8        0xc9a build/default/production/library/motor_led/e_init_port.o
+ .debug_info      0x001b52        0xa8b build/default/production/library/motor_led/e_motors.o
+ .debug_info      0x0025dd        0x256 build/default/production/library/a_d/e_accelerometer.o
+ .debug_info      0x002833        0x664 build/default/production/library/a_d/e_ad_conv.o
+ .debug_info      0x002e97        0x37e build/default/production/library/matlab/matlab.o
+ .debug_info      0x003215        0x1c6 build/default/production/RS_accelerometer_utility.o
+ .debug_info      0x0033db        0x66d build/default/production/RS_debug.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x980
@@ -535,21 +533,21 @@ userdata
  .debug_abbrev    0x0007d8         0x76 build/default/production/RS_accelerometer_utility.o
  .debug_abbrev    0x00084e        0x132 build/default/production/RS_debug.o
 
-.debug_line       0x000000       0x14d2
+.debug_line       0x000000       0x14b2
  *(.debug_line)
  .debug_line      0x000000        0x18a build/default/production/main.o
- .debug_line      0x00018a        0x185 build/default/production/RS_motors.o
- .debug_line      0x00030f        0x176 build/default/production/RS_accelerometer.o
- .debug_line      0x000485         0x5e build/default/production/library/uart/e_init_uart1.o
- .debug_line      0x0004e3         0x6a build/default/production/library/uart/e_uart1_rx_char.o
- .debug_line      0x00054d         0x7c build/default/production/library/uart/e_uart1_tx_char.o
- .debug_line      0x0005c9        0x2cd build/default/production/library/motor_led/e_init_port.o
- .debug_line      0x000896        0x4a1 build/default/production/library/motor_led/e_motors.o
- .debug_line      0x000d37        0x105 build/default/production/library/a_d/e_accelerometer.o
- .debug_line      0x000e3c        0x1af build/default/production/library/a_d/e_ad_conv.o
- .debug_line      0x000feb        0x273 build/default/production/library/matlab/matlab.o
- .debug_line      0x00125e         0xd6 build/default/production/RS_accelerometer_utility.o
- .debug_line      0x001334        0x19e build/default/production/RS_debug.o
+ .debug_line      0x00018a        0x16d build/default/production/RS_motors.o
+ .debug_line      0x0002f7        0x186 build/default/production/RS_accelerometer.o
+ .debug_line      0x00047d         0x5e build/default/production/library/uart/e_init_uart1.o
+ .debug_line      0x0004db         0x6a build/default/production/library/uart/e_uart1_rx_char.o
+ .debug_line      0x000545         0x7c build/default/production/library/uart/e_uart1_tx_char.o
+ .debug_line      0x0005c1        0x2cd build/default/production/library/motor_led/e_init_port.o
+ .debug_line      0x00088e        0x4a1 build/default/production/library/motor_led/e_motors.o
+ .debug_line      0x000d2f        0x105 build/default/production/library/a_d/e_accelerometer.o
+ .debug_line      0x000e34        0x1af build/default/production/library/a_d/e_ad_conv.o
+ .debug_line      0x000fe3        0x273 build/default/production/library/matlab/matlab.o
+ .debug_line      0x001256         0xbe build/default/production/RS_accelerometer_utility.o
+ .debug_line      0x001314        0x19e build/default/production/RS_debug.o
 
 .debug_frame      0x000000        0x318
  *(.debug_frame)
@@ -564,17 +562,17 @@ userdata
  .debug_frame     0x000290         0x34 build/default/production/RS_accelerometer_utility.o
  .debug_frame     0x0002c4         0x54 build/default/production/RS_debug.o
 
-.debug_str        0x000000        0x1a1
+.debug_str        0x000000        0x17e
  *(.debug_str)
- .debug_str       0x000000         0x34 build/default/production/main.o
- .debug_str       0x000034         0x28 build/default/production/RS_motors.o
- .debug_str       0x00005c         0x27 build/default/production/RS_accelerometer.o
- .debug_str       0x000083         0x5f build/default/production/library/motor_led/e_init_port.o
- .debug_str       0x0000e2         0x51 build/default/production/library/motor_led/e_motors.o
- .debug_str       0x000133          0xa build/default/production/library/a_d/e_accelerometer.o
- .debug_str       0x00013d         0x1f build/default/production/library/a_d/e_ad_conv.o
- .debug_str       0x00015c         0x1e build/default/production/library/matlab/matlab.o
- .debug_str       0x00017a         0x27 build/default/production/RS_debug.o
+ .debug_str       0x000000         0x27 build/default/production/main.o
+ .debug_str       0x000027         0x12 build/default/production/RS_motors.o
+ .debug_str       0x000039         0x27 build/default/production/RS_accelerometer.o
+ .debug_str       0x000060         0x5f build/default/production/library/motor_led/e_init_port.o
+ .debug_str       0x0000bf         0x51 build/default/production/library/motor_led/e_motors.o
+ .debug_str       0x000110          0xa build/default/production/library/a_d/e_accelerometer.o
+ .debug_str       0x00011a         0x1f build/default/production/library/a_d/e_ad_conv.o
+ .debug_str       0x000139         0x1e build/default/production/library/matlab/matlab.o
+ .debug_str       0x000157         0x27 build/default/production/RS_debug.o
 
 .debug_loc
  *(.debug_loc)
@@ -583,28 +581,28 @@ userdata
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x434
+                  0x000000        0x423
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x7c build/default/production/main.o
+                  0x000000         0x6b build/default/production/main.o
  .debug_pubnames
-                  0x00007c         0x7c build/default/production/RS_motors.o
+                  0x00006b         0x7c build/default/production/RS_motors.o
  .debug_pubnames
-                  0x0000f8         0x9a build/default/production/RS_accelerometer.o
+                  0x0000e7         0x9a build/default/production/RS_accelerometer.o
  .debug_pubnames
-                  0x000192         0x4c build/default/production/library/motor_led/e_init_port.o
+                  0x000181         0x4c build/default/production/library/motor_led/e_init_port.o
  .debug_pubnames
-                  0x0001de         0xc7 build/default/production/library/motor_led/e_motors.o
+                  0x0001cd         0xc7 build/default/production/library/motor_led/e_motors.o
  .debug_pubnames
-                  0x0002a5         0x2f build/default/production/library/a_d/e_accelerometer.o
+                  0x000294         0x2f build/default/production/library/a_d/e_accelerometer.o
  .debug_pubnames
-                  0x0002d4         0x2e build/default/production/library/a_d/e_ad_conv.o
+                  0x0002c3         0x2e build/default/production/library/a_d/e_ad_conv.o
  .debug_pubnames
-                  0x000302         0x82 build/default/production/library/matlab/matlab.o
+                  0x0002f1         0x82 build/default/production/library/matlab/matlab.o
  .debug_pubnames
-                  0x000384         0x32 build/default/production/RS_accelerometer_utility.o
+                  0x000373         0x32 build/default/production/RS_accelerometer_utility.o
  .debug_pubnames
-                  0x0003b6         0x7e build/default/production/RS_debug.o
+                  0x0003a5         0x7e build/default/production/RS_debug.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -650,14 +648,14 @@ userdata
                   0x000014          0x4 LONG 0x3a0 DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000016          0x4 LONG 0x3a0 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000018          0x4 LONG 0x3a0 DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001a          0x4 LONG 0xba0 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0xa62 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001c          0x4 LONG 0x3a0 DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001e          0x4 LONG 0x3a0 DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000020          0x4 LONG 0xce8 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000020          0x4 LONG 0xc54 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000022          0x4 LONG 0x3a0 DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000024          0x4 LONG 0x3a0 DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000026          0x4 LONG 0xe1a DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000028          0x4 LONG 0xdba DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000026          0x4 LONG 0xd84 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000028          0x4 LONG 0xd24 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002a          0x4 LONG 0x3a0 DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002c          0x4 LONG 0x3a0 DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002e          0x4 LONG 0x3a0 DEFINED (__SI2CInterrupt)?ABSOLUTE (__SI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -714,14 +712,14 @@ userdata
                   0x000094          0x4 LONG 0x3a0 DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000096          0x4 LONG 0x3a0 DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000098          0x4 LONG 0x3a0 DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00009a          0x4 LONG 0xba0 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009a          0x4 LONG 0xa62 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00009c          0x4 LONG 0x3a0 DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00009e          0x4 LONG 0x3a0 DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0000a0          0x4 LONG 0xce8 DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a0          0x4 LONG 0xc54 DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000a2          0x4 LONG 0x3a0 DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000a4          0x4 LONG 0x3a0 DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0000a6          0x4 LONG 0xe1a DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0000a8          0x4 LONG 0xdba DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a6          0x4 LONG 0xd84 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a8          0x4 LONG 0xd24 DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000aa          0x4 LONG 0x3a0 DEFINED (__AltADCInterrupt)?ABSOLUTE (__AltADCInterrupt):DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000ac          0x4 LONG 0x3a0 DEFINED (__AltNVMInterrupt)?ABSOLUTE (__AltNVMInterrupt):DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000ae          0x4 LONG 0x3a0 DEFINED (__AltSI2CInterrupt)?ABSOLUTE (__AltSI2CInterrupt):DEFINED (__SI2CInterrupt)?ABSOLUTE (__SI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1855,21 +1853,21 @@ __c30_signature
  __c30_signature
                   0x00059c          0x6 c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
 
-_0481BC0058ef896f
+_04757C0058f4dd64
                     0x0800         0x78
- _0481BC0058ef896f
+ _04757C0058f4dd64
                     0x0800         0x78 build/default/production/RS_accelerometer.o
                     0x0800                  _acc_raw_X
 
-_0481BD2058ef896f
+_04757D2058f4dd64
                     0x0880         0x78
- _0481BD2058ef896f
+ _04757D2058f4dd64
                     0x0880         0x78 build/default/production/RS_accelerometer.o
                     0x0880                  _acc_raw_Y
 
-_0481BE4058ef896f
+_04757E4058f4dd64
                     0x0900         0x78
- _0481BE4058ef896f
+ _04757E4058f4dd64
                     0x0900         0x78 build/default/production/RS_accelerometer.o
                     0x0900                  _acc_raw_Z
 
@@ -1885,13 +1883,12 @@ _0481BE4058ef896f
                     0x0cb8                  _U1RXRcvCnt
                     0x0cba                  _U1RXReadCnt
 
-.nbss               0x0cbc         0x20
- .nbss              0x0cbc         0x14 build/default/production/main.o
+.nbss               0x0cbc         0x1c
+ .nbss              0x0cbc         0x10 build/default/production/main.o
                     0x0cbc                  _acc_T
                     0x0cc2                  _speed_T
                     0x0cc6                  _acc_prev_T
-                    0x0ccc                  _speed_prev_T
- .nbss              0x0cd0          0xc build/default/production/library/motor_led/e_motors.o
+ .nbss              0x0ccc          0xc build/default/production/library/motor_led/e_motors.o
 
 .ndata              0x0878          0x8
  .ndata             0x0878          0x8 build/default/production/RS_accelerometer.o
@@ -1905,8 +1902,8 @@ _0481BE4058ef896f
                     0x08fa                  U1TXLength
                     0x08fc                  U1TXOk
 
-.nbss               0x0cdc          0x4
- .nbss              0x0cdc          0x4 build/default/production/RS_motors.o
+.nbss               0x0cd8          0x4
+ .nbss              0x0cd8          0x4 build/default/production/RS_motors.o
 
 .ndata              0x08fe          0x2
  .ndata             0x08fe          0x2 build/default/production/RS_debug.o
@@ -1915,56 +1912,56 @@ _0481BE4058ef896f
 .const              0x85c6          0xa load address 0x0005c6  
  .const             0x85c6          0xa build/default/production/library/matlab/matlab.o
 
-.text             0x0005d0        0x67a
+.text             0x0005d0        0x5e6
  .text            0x0005d0        0x1ce build/default/production/library/matlab/matlab.o
                   0x0005d0                  _e_send_int_to_matlab
                   0x0005fe                  _e_send_char_to_matlab
                   0x000624                  _e_receive_int_from_matlab
                   0x000716                  _e_receive_char_from_matlab
- .text            0x00079e        0x16a build/default/production/RS_motors.o
+ .text            0x00079e        0x148 build/default/production/RS_motors.o
                   0x00079e                  _RS_mot_updateSpeed
-                  0x0007fa                  _RS_mot_calcSpeedLin
-                  0x000834                  _RS_mot_calcSpeedAng
-                  0x000848                  _RS_mot_setSpeed
-                  0x00089c                  _RS_mot_PID
- .text            0x000908        0x128 build/default/production/RS_accelerometer_utility.o
-                  0x000908                  _RS_acc_mean
-                  0x000954                  _RS_acc_norm
- .text            0x000a30         0xe4 build/default/production/RS_accelerometer.o
-                  0x000a30                  _RS_acc_get
-                  0x000a70                  _RS_acc_update
-                  0x000ae0                  _RS_acc_I
-                  0x000afe                  _RS_acc_D
- .text            0x000b14         0xac build/default/production/RS_debug.o
-                  0x000b14                  _matlab_uart
-                  0x000b80                  _init_TMR1
-                  0x000ba0                  __T1Interrupt
-                  0x000bb6                  _init_matlab
- .text            0x000bc0         0x8a build/default/production/library/motor_led/e_init_port.o
-                  0x000bc0                  _e_init_port
+                  0x0007de                  _RS_mot_calcSpeedLin
+                  0x000814                  _RS_mot_calcSpeedAng
+                  0x000828                  _RS_mot_setSpeed
+                  0x00087c                  _RS_mot_PID
+ .text            0x0008e6         0xf0 build/default/production/RS_accelerometer.o
+                  0x0008e6                  _RS_acc_get
+                  0x000926                  _RS_acc_update
+                  0x0009a2                  _RS_acc_I
+                  0x0009c0                  _RS_acc_D
+ .text            0x0009d6         0xac build/default/production/RS_debug.o
+                  0x0009d6                  _matlab_uart
+                  0x000a42                  _init_TMR1
+                  0x000a62                  __T1Interrupt
+                  0x000a78                  _init_matlab
+ .text            0x000a82         0xaa build/default/production/RS_accelerometer_utility.o
+                  0x000a82                  _RS_acc_mean
+                  0x000ace                  _RS_acc_norm
+ .text            0x000b2c         0x8a build/default/production/library/motor_led/e_init_port.o
+                  0x000b2c                  _e_init_port
 
-.dinit            0x000c4a         0x7e
- .dinit           0x000c4a         0x7e data_init
+.dinit            0x000bb6         0x7e
+ .dinit           0x000bb6         0x7e data_init
 
-.text             0x000cc8        0x1f2
- .text            0x000cc8         0x7a build/default/production/main.o
-                  0x000cc8                  _Init_TMR2
-                  0x000ce8                  __T2Interrupt
-                  0x000d18                  _RS_init
-                  0x000d3a                  _main
- .text            0x000d42         0x78 build/default/production/library/a_d/e_ad_conv.o
-                  0x000d42                  _e_init_ad
-                  0x000d7e                  _e_read_ad
- .text            0x000dba         0x60 build/default/production/library/uart/e_uart1_tx_char.o
-                  0x000dba                  __U1TXInterrupt
-                  0x000dfe                  _e_send_uart1_char
-                  0x000e16                  _e_uart1_sending
- .text            0x000e1a         0x3c build/default/production/library/uart/e_uart1_rx_char.o
-                  0x000e1a                  __U1RXInterrupt
-                  0x000e32                  _e_ischar_uart1
-                  0x000e3a                  _e_getchar_uart1
- .text            0x000e56         0x36 build/default/production/library/a_d/e_accelerometer.o
-                  0x000e56                  _e_init_acc
-                  0x000e5e                  _e_get_acc
- .text            0x000e8c         0x2e build/default/production/library/uart/e_init_uart1.o
-                  0x000e8c                  _e_init_uart1
+.text             0x000c34        0x1f0
+ .text            0x000c34         0x78 build/default/production/main.o
+                  0x000c34                  _Init_TMR2
+                  0x000c54                  __T2Interrupt
+                  0x000c82                  _RS_init
+                  0x000ca4                  _main
+ .text            0x000cac         0x78 build/default/production/library/a_d/e_ad_conv.o
+                  0x000cac                  _e_init_ad
+                  0x000ce8                  _e_read_ad
+ .text            0x000d24         0x60 build/default/production/library/uart/e_uart1_tx_char.o
+                  0x000d24                  __U1TXInterrupt
+                  0x000d68                  _e_send_uart1_char
+                  0x000d80                  _e_uart1_sending
+ .text            0x000d84         0x3c build/default/production/library/uart/e_uart1_rx_char.o
+                  0x000d84                  __U1RXInterrupt
+                  0x000d9c                  _e_ischar_uart1
+                  0x000da4                  _e_getchar_uart1
+ .text            0x000dc0         0x36 build/default/production/library/a_d/e_accelerometer.o
+                  0x000dc0                  _e_init_acc
+                  0x000dc8                  _e_get_acc
+ .text            0x000df6         0x2e build/default/production/library/uart/e_init_uart1.o
+                  0x000df6                  _e_init_uart1

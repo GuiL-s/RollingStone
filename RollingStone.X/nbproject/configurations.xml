@@ -5,7 +5,6 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>RS_accelerometer.h</itemPath>
-      <itemPath>RS_motor.h</itemPath>
       <itemPath>RS_const.h</itemPath>
       <itemPath>RS_accelerometer_utility.h</itemPath>
       <itemPath>library/a_d/e_accelerometer.h</itemPath>
@@ -16,6 +15,7 @@
       <itemPath>library/uart/e_uart_char.h</itemPath>
       <itemPath>library/matlab/matlab.h</itemPath>
       <itemPath>RS_debug.h</itemPath>
+      <itemPath>RS_motors.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
