@@ -16,12 +16,14 @@
 #include "motor_led/e_motors.h"
 
     
-#define K_LIN       0.15
+#define K_LIN       0.05
 #define K_ANG       3
 
 #define SP_TO_ACC   1
     
-#define MAX_SPEED   1000
+#define MAX_SPEED   500
+#define MAX_INT 0x7FFF
+#define MIN_INT 0x8000
 
 
 void RS_mot_updateSpeed(int *acc_T, int *speed_T);
